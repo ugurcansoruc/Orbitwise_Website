@@ -25,19 +25,5 @@
   "Navigation": {
     "home": "Start",
     "about": "Über"
-  },
-  "PageLayout": {
-    "links": {
-      "docs": {
-        "title": "Dokumentation",
-        "description": "Erfahre mehr über next-intl in der offiziellen Dokumentation.",
-        "href": "https://next-intl-docs.vercel.app/"
-      },
-      "source": {
-        "title": "Quellcode",
-        "description": "Sieh dir den Quellcode dieses Beispiels auf GitHub an.",
-        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-next-13"
-      }
-    }
   }
 }

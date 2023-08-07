@@ -1,20 +1,33 @@
 'use client';
 
+import AboutSectionOne from 'components/About/AboutSectionOne';
+import AboutSectionTwo from 'components/About/AboutSectionTwo';
+import Blog from 'components/Blog';
+import Brands from 'components/Brands';
+import ScrollUp from 'components/Common/ScrollUp';
+import Contact from 'components/Contact';
+import Hero from 'components/Hero';
+import Pricing from 'components/Pricing';
+import Testimonials from 'components/Testimonials';
+import Video from 'components/Video';
 import {useTranslations} from 'next-intl';
-import PageLayout from 'components/PageLayout';
 
 export default function IndexPage() {
   const t = useTranslations('IndexPage');
 
   return (
-    <PageLayout title={t('title')}>
-      <p className="max-w-[590px]">
-        {t.rich('description', {
-          code: (chunks) => (
-            <code className="font-mono text-white">{chunks}</code>
-          )
-        })}
-      </p>
-    </PageLayout>
+    <>
+      {/*TODO - removed Features*/}
+      <ScrollUp />
+      <Hero />
+      <Video />
+      <Brands />
+      <AboutSectionOne />
+      <AboutSectionTwo />
+      <Testimonials />
+      <Pricing />
+      <Blog />
+      <Contact />
+    </>
   );
 }

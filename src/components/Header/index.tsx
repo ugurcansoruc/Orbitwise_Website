@@ -1,11 +1,9 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { SetStateAction, JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import { UrlObject } from "url";
 import LocaleSwitcher from "components/LocaleSwitcher";
 
 const Header = () => {
@@ -30,7 +28,7 @@ const Header = () => {
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
-  const handleSubmenu = (index: SetStateAction<number>) => {
+  const handleSubmenu = (index) => {
     if (openIndex === index) {
       setOpenIndex(-1);
     } else {
@@ -135,7 +133,7 @@ const Header = () => {
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem.submenu.map((submenuItem: { path: string | UrlObject; id: Key | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) => (
+                              {menuItem.submenu.map((submenuItem) => (
                                 <Link
                                   href={submenuItem.path}
                                   key={submenuItem.id}
@@ -165,9 +163,11 @@ const Header = () => {
                 >
                   Sign Up
                 </Link>
-                <LocaleSwitcher />
                 <div>
                   <ThemeToggler />
+                </div>
+                <div>
+                  <LocaleSwitcher/>
                 </div>
               </div>
             </div>
