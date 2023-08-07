@@ -1,7 +1,7 @@
 import {render} from '@testing-library/react';
 import pick from 'lodash/pick';
 import {NextIntlClientProvider} from 'next-intl';
-import messages from '../../messages/en.json';
+import messages from '../../messages/tr.json';
 import Navigation from './Navigation';
 
 // If the tested component uses features from Next.js, you have to mock them.
@@ -16,14 +16,14 @@ jest.mock('next/navigation', () => ({
     replace: jest.fn()
   }),
   useParams: () => ({
-    locale: 'en'
+    locale: 'tr'
   })
 }));
 
 it('renders', () => {
   render(
     <NextIntlClientProvider
-      locale="en"
+      locale="tr"
       messages={pick(messages, ['Navigation', 'LocaleSwitcher'])}
     >
       <Navigation />

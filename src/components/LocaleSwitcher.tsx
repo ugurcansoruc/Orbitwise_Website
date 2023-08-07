@@ -33,7 +33,7 @@ export default function LocaleSwitcher() {
         disabled={isPending}
         onChange={onSelectChange}
       >
-        {['en', 'de'].map((cur) => (
+        {['tr', 'en'].map((cur) => (
           <option key={cur} value={cur}>
             {t('locale', {locale: cur})}
           </option>

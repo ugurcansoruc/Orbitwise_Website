@@ -5,7 +5,7 @@
   },
   "AboutPage": {
     "title": "Über",
-    "description": "<p>Auch das Routing ist internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/about</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL mit der Locale ergänzt (<code>/de/about</code>).</p>"
+    "description": "<p>Auch das Routing ist internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/about</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL mit der Locale ergänzt (<code>/en/about</code>).</p>"
   },
   "Error": {
     "title": "Etwas ist schief gelaufen!",
@@ -20,7 +20,7 @@
   },
   "LocaleSwitcher": {
     "label": "Sprache ändern",
-    "locale": "{locale, select, de {Deutsch} en {Englisch} other {Unbekannt}}"
+    "locale": "{locale, select, en {English} tr {Türkçe} other {Bilinmiyor}}"
   },
   "Navigation": {
     "home": "Start",
