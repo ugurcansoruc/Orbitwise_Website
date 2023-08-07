@@ -7,7 +7,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
   return (
     <>
       <div
-        className="wow fadeInUp relative overflow-hidden rounded-md bg-white shadow-one dark:bg-dark"
+        className="wow fadeInUp relative rounded-md bg-white shadow-one dark:bg-dark"
         data-wow-delay=".1s"
       >
         <Link href="/" className="relative block h-[220px] w-full">
@@ -31,7 +31,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           <div className="flex items-center">
             <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
               <div className="mr-4">
-                <div className="relative h-10 w-10 overflow-hidden rounded-full">
+                <div className="relative h-10 w-10 rounded-full">
                   <Image src={author.image} alt="author" fill />
                 </div>
               </div>
