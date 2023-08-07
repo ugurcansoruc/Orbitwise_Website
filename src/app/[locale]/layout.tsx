@@ -3,7 +3,6 @@ import {Inter} from 'next/font/google';
 import {notFound} from 'next/navigation';
 import {createTranslator, NextIntlClientProvider} from 'next-intl';
 import {ReactNode} from 'react';
-import Navigation from 'components/Navigation';
 import Header from 'components/Header';
 
 const inter = Inter({subsets: ['latin']});
@@ -48,8 +47,7 @@ export default async function LocaleLayout({
     <html className="h-full" lang={locale}>
       <body className={clsx(inter.className, 'flex h-full flex-col')}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header></Header>
-          {/*//<Navigation />*/}
+          <Header/>
           {children}
         </NextIntlClientProvider>
       </body>

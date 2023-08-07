@@ -1,10 +1,12 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { SetStateAction, JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { UrlObject } from "url";
+import LocaleSwitcher from "components/LocaleSwitcher";
 
 const Header = () => {
   // Navbar toggle
@@ -163,6 +165,7 @@ const Header = () => {
                 >
                   Sign Up
                 </Link>
+                <LocaleSwitcher />
                 <div>
                   <ThemeToggler />
                 </div>
