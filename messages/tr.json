@@ -1,4 +1,8 @@
 {
+  "LocaleSwitcher": {
+    "label": "Dil değiştir",
+    "locale": "{locale, select, en {English} tr {Türkçe} other {Bilinmiyor}}"
+  },
   "IndexPage": {
     "title": "next-intl Beispiel",
     "description": "Dies ist ein Beispiel, das die Verwendung von <code>next-intl</code> mit dem Next.js App Router demonstriert. Bei Ändern der Sprache rechts oben ändert sich der Inhalt dieser Seite."
@@ -17,10 +21,6 @@
   },
   "LocaleLayout": {
     "title": "next-intl Beispiel"
-  },
-  "LocaleSwitcher": {
-    "label": "Sprache ändern",
-    "locale": "{locale, select, en {English} tr {Türkçe} other {Bilinmiyor}}"
   },
   "Navigation": {
     "home": "Start",

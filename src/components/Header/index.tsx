@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import LocaleSwitcher from "components/LocaleSwitcher";
+import NavigationLink from "components/NavigationLink";
 
 const Header = () => {
   // Navbar toggle
@@ -106,12 +107,13 @@ const Header = () => {
                     {menuData.map((menuItem, index) => (
                       <li key={menuItem.id} className="group relative">
                         {menuItem.path ? (
-                          <Link
+                          <NavigationLink
                             href={menuItem.path}
-                            className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`}
+                            className="flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                            key={menuItem.id}
                           >
                             {menuItem.title}
-                          </Link>
+                          </NavigationLink>
                         ) : (
                           <>
                             <a
@@ -135,13 +137,13 @@ const Header = () => {
                             >
                               {menuItem.submenu?.map((submenuItem) =>
                                 typeof submenuItem.path === "string" ? (
-                                  <Link
+                                  <NavigationLink
                                     href={submenuItem.path}
-                                    key={submenuItem.id}
                                     className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+                                    key={submenuItem.id}
                                   >
                                     {submenuItem.title}
-                                  </Link>
+                                  </NavigationLink>
                                 ) : null
                               )}
                             </div>
