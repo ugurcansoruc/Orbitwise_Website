@@ -47,8 +47,8 @@ export default async function LocaleLayout({
   const messages = await getMessages(locale);
 
   return (
-    <html className="h-full" lang={locale}>
-      <body className={clsx(inter.className, "flex h-full flex-col")}>
+    <html lang={locale}>
+      <body className="dark:bg-black">
         <Providers>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header />

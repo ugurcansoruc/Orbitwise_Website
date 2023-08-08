@@ -17,9 +17,7 @@ export default function IndexPage() {
   const t = useTranslations('IndexPage');
 
   return (
-    <>
-      {/*TODO - removed Features*/}
-      
+    <>      
       <ScrollUp />
       <Hero />
       <Video />
