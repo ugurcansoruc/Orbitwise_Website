@@ -7,7 +7,11 @@ import menuData from "./menuData";
 import LocaleSwitcher from "components/LocaleSwitcher";
 import NavigationLink from "components/NavigationLink";
 
+import { useTranslations } from "next-intl";
+
 const Header = () => {
+  const t = useTranslations('HeaderPage');
+
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -112,7 +116,7 @@ const Header = () => {
                             className="flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             key={menuItem.id}
                           >
-                            {menuItem.title}
+                                {t(`${menuItem.title}`)}
                           </NavigationLink>
                         ) : (
                           <>
@@ -120,7 +124,7 @@ const Header = () => {
                               onClick={() => handleSubmenu(index)}
                               className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
-                              {menuItem.title}
+                              {t(`${menuItem.title}`)}
                               <span className="pl-3">
                                 <svg width="15" height="14" viewBox="0 0 15 14">
                                   <path

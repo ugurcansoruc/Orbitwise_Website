@@ -1,29 +1,26 @@
 {
+  "LocaleLayout": {
+    "title": "Orbit Wise | Eğitim Uydu Kiti"
+  },
   "LocaleSwitcher": {
-    "label": "Dil değiştir",
-    "locale": "{locale, select, en {English} tr {Türkçe} other {Bilinmiyor}}"
-  },
-  "IndexPage": {
-    "title": "next-intl Beispiel",
-    "description": "Dies ist ein Beispiel, das die Verwendung von <code>next-intl</code> mit dem Next.js App Router demonstriert. Bei Ändern der Sprache rechts oben ändert sich der Inhalt dieser Seite."
-  },
-  "AboutPage": {
-    "title": "Über",
-    "description": "<p>Auch das Routing ist internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/about</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL mit der Locale ergänzt (<code>/en/about</code>).</p>"
+    "label": "Dil Değiştir",
+    "locale": "{locale, select, en {İngilizce} tr {Türkçe} other {Bilinmeyen}}"
   },
   "Error": {
-    "title": "Etwas ist schief gelaufen!",
-    "description": "<p>Es ist leider ein Problem aufgetreten.</p><p>Du kannst versuchen <retry>diese Seite neu zu laden</retry>.</p>"
+    "title": "Bir şeyler ters gitti!",
+    "description": "<p>Üzgünüz, maalesef bir hata ile karşılaştık.</p><p>Ziyaret etmekte olduğunuz sayfayı <retry>yeniden yüklemeyi</retry> deneyebilirsiniz.</p>"
   },
   "NotFoundPage": {
-    "title": "Seite nicht gefunden",
-    "description": "Bitte überprüfe die Addressleiste deines Browsers oder verwende die Navigation um zu einer bekannten Seite zu wechseln."
+    "title": "Sayfa bulunamadı",
+    "description": "Lütfen tarayıcı adres çubuğunu kontrol edin veya bilinen bir sayfaya gitmek için gezinmeyi kullanın."
   },
-  "LocaleLayout": {
-    "title": "next-intl Beispiel"
-  },
-  "Navigation": {
-    "home": "Start",
-    "about": "Über"
+  "HeaderPage": {
+    "title": "Navigasyon barı",
+    "description": "Navigasyon barı ile ilgili islemler gerceklestirilmektedir.",
+    "Home":"Ana Sayfa",
+    "About": "Hakkımızda",
+    "Blog": "Blog",
+    "Support": "Destek",
+    "Pages": "Sayfalar"
   }
 }

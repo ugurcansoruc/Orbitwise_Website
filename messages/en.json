@@ -1,15 +1,10 @@
 {
+  "LocaleLayout": {
+    "title": "Orbit Wise | Educational Satellite Kit"
+  },
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, en {English} tr {Türkçe} other {Unknown}}"
-  },
-  "IndexPage": {
-    "title": "next-intl example",
-    "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes."
-  },
-  "AboutPage": {
-    "title": "About",
-    "description": "<p>The routing is internationalized too.</p><p>If you're using the default language English, you'll see <code>/about</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is prefixed with the locale (<code>/en/about</code>).</p>"
   },
   "Error": {
     "title": "Something went wrong!",
@@ -19,11 +14,13 @@
     "title": "Page not found",
     "description": "Please double-check the browser address bar or use the navigation to go to a known page."
   },
-  "LocaleLayout": {
-    "title": "next-intl example"
-  },
-  "Navigation": {
-    "home": "Home",
-    "about": "About"
+  "HeaderPage": {
+    "title": "Navigation Bar",
+    "description": "Operations related to the navigation bar are carried out.l Satellite Kit",
+    "Home":"Home",
+    "About": "About",
+    "Blog": "Blog",
+    "Support": "Support",
+    "Pages": "Pages"
   }
 }
