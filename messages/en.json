@@ -4,7 +4,7 @@
   },
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, en {English} tr {Türkçe} other {Unknown}}"
+    "locale": "{locale, select, en {English} tr {Turkish} other {Unknown}}"
   },
   "Error": {
     "title": "Something went wrong!",

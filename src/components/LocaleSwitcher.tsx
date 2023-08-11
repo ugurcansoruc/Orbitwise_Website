@@ -14,65 +14,82 @@ export default function LocaleSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
 
-  function onSelectChange(value: string) {
-    startTransition(() => {
-      if(value != locale)
-      {
-        console.log(value);
-
-        router.replace(pathname, { locale: value });
-      }
-    });
+  function onSelectChange(nextLocale: string) {
+    if (nextLocale !== locale) {
+      // Check if the selected locale is different from the current locale
+      startTransition(() => {
+        router.replace(pathname, { locale: nextLocale });
+      });
+    }
   }
 
   return (
+    <>
+      <Listbox value={locale} onChange={onSelectChange}>
+        <div >
+          <Listbox.Button className="bg-gray-2 dark:bg-dark-bg flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-black dark:text-white md:h-10 md:w-10">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                {locale === "tr" ? (
+                  <img
+                    src="/images/languages/turkey-svgrepo-com.svg"
+                    alt="Turkish Icon"
+                    className="h-full"
+                  />
+                ) : (
+                  <img
+                    src="/images/languages/united-states-svgrepo-com.svg"
+                    alt="English Icon"
+                    className="h-full"
+                  />
+                )}
+              </div>
+              <ChevronUpDownIcon className="text-gray-400 h-5 w-5" />
+            </div>
+          </Listbox.Button>
+          <Listbox.Options className="absolute mt-1 max-h-60 ring-black ring-opacity-5 focus:outline-none ">
+            {["tr", "en"].map((cur) => (
+              <Listbox.Option
+                key={cur}
+                className={({ active }) =>
+                  `py-0.3 pl-0.4 relative cursor-default select-none ${
+                    active ? "bg-amber-100 text-amber-900" : "text-gray-900"
+                  }`
+                }
+                value={cur}
+              >
+                {({ selected }) => (
+                  <>
+                    <span className="block flex items-center">
+                      {cur === "tr" ? (
+                        <img
+                          src="/images/languages/turkey-svgrepo-com.svg"
+                          alt="Turkish Icon"
+                          className="mr-2 h-6 w-6"
+                        />
+                      ) : (
+                        <img
+                          src="/images/languages/united-states-svgrepo-com.svg"
+                          alt="English Icon"
+                          className="mr-2 h-6 w-6"
+                        />
+                      )}
 
-      <div>
-        <Listbox value={locale} onChange={onSelectChange}>
-          <div className="relative mt-1">
-            <Listbox.Button className="focus-visible:border-indigo-500 focus-visible:ring-offset-orange-300 relative w-full cursor-default rounded-lg py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 ">
-            {t("locale", { locale: `${locale}` })}
-            
-              <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                <ChevronUpDownIcon
-                  className="text-gray-400 h-5 w-5"
-                  aria-hidden="true"
-                />
-              </span>
-            </Listbox.Button>
-
-            <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md py-1 text-base ring-black ring-opacity-5 focus:outline-none ">
-              {["tr", "en"].map((cur) => (
-                <Listbox.Option
-                  key={cur}
-                  className={({ active }) =>
-                    `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                      active ? "bg-amber-100 text-amber-900" : "text-gray-900"
-                    }`
-                  }
-                  value={cur}
-                >
-                  {({ selected }) => (
-                    <>
                       <span
-                        className={`block truncate ${
+                        className={`block flex items-center ${
                           selected ? "font-medium" : "font-normal"
-                        }`}
+                        } translate`}
                       >
                         {t("locale", { locale: cur })}
                       </span>
-                      {selected ? (
-                        <span className="text-amber-600 absolute inset-y-0 left-0 flex items-center pl-3">
-                          <CheckIcon className="h-5 w-5" aria-hidden="true" />
-                        </span>
-                      ) : null}
-                    </>
-                  )}
-                </Listbox.Option>
-              ))}
-            </Listbox.Options>
-          </div>
-        </Listbox>
-      </div>
+                    </span>
+                  </>
+                )}
+              </Listbox.Option>
+            ))}
+          </Listbox.Options>
+        </div>
+      </Listbox>
+    </>
   );
 }
