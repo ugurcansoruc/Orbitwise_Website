@@ -22,5 +22,9 @@
     "Blog": "Blog",
     "Support": "Destek",
     "Pages": "Sayfalar"
+  },
+  "HeroComponent":
+  {
+    "Header":"Startup & SaaS için Ücretsiz ve Açık Kaynak Next.js Şablonu"
   }
 }

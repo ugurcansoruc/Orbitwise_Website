@@ -22,5 +22,9 @@
     "Blog": "Blog",
     "Support": "Support",
     "Pages": "Pages"
+  },
+  "HeroComponent":
+  {
+    "Header":"Free and Open-Source Next.js Template for Startup & SaaS"
   }
 }
