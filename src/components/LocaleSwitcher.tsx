@@ -30,7 +30,7 @@ export default function LocaleSwitcher() {
       <div>
         <Listbox value={locale} onChange={onSelectChange}>
           <div className="relative mt-1">
-            <Listbox.Button className="focus-visible:border-indigo-500 focus-visible:ring-offset-orange-300 relative w-full cursor-default rounded-lg py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 sm:text-sm">
+            <Listbox.Button className="focus-visible:border-indigo-500 focus-visible:ring-offset-orange-300 relative w-full cursor-default rounded-lg py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 ">
             {t("locale", { locale: `${locale}` })}
             
               <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -41,7 +41,7 @@ export default function LocaleSwitcher() {
               </span>
             </Listbox.Button>
 
-            <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md py-1 text-base ring-black ring-opacity-5 focus:outline-none ">
               {["tr", "en"].map((cur) => (
                 <Listbox.Option
                   key={cur}
