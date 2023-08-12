@@ -21,7 +21,14 @@
     "About": "About",
     "Blog": "Blog",
     "Support": "Support",
-    "Pages": "Pages"
+    "Pages": "Pages",
+    "About_Page":"About_Page",
+    "Contact_Page":"Contact_Page",
+    "Blog_Grid_Page":"Blog_Grid_Page",
+    "Blog_Sidebar_Page":"Blog_Sidebar_Page",
+    "Blog_Details_Page":"Blog_Details_Page",
+    "Sign_In_Page":"Sign_In_Page",
+    "Sign_Up_Page":"Sign_Up_Page"
   },
   "HeroComponent":
   {

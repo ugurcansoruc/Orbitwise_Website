@@ -116,15 +116,15 @@ const Header = () => {
                             className="flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             key={menuItem.id}
                           >
-                                {t(`${menuItem.title}`)}
-                          </NavigationLink>
+                            {t(menuItem.title)}
+                            </NavigationLink>
                         ) : (
                           <>
                             <a
                               onClick={() => handleSubmenu(index)}
                               className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
-                              {t(`${menuItem.title}`)}
+                              {t(menuItem.title)}
                               <span className="pl-3">
                                 <svg width="15" height="14" viewBox="0 0 15 14">
                                   <path
