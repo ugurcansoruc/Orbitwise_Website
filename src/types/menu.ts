@@ -5,5 +5,5 @@ export type Menu = {
   title: MessageKeys;
   path?: string;
   newTab: boolean;
-  submenu?: Menu[];
+  submenu?: Array<Menu>;
 };

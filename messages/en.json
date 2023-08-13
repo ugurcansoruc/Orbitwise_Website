@@ -28,7 +28,8 @@
     "Blog_Sidebar_Page":"Blog_Sidebar_Page",
     "Blog_Details_Page":"Blog_Details_Page",
     "Sign_In_Page":"Sign_In_Page",
-    "Sign_Up_Page":"Sign_Up_Page"
+    "Sign_Up_Page":"Sign_Up_Page",
+    "Error_Page":"Error_Page"
   },
   "HeroComponent":
   {
