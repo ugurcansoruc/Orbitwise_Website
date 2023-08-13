@@ -7,15 +7,17 @@ const checkIcon = (
   </svg>
 );
 
-function AboutSectionOne () {
-  const List = ({ text  } : {text: string}) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-        {checkIcon}
-      </span>
-      {text}
-    </p>
-  );
+function AboutSectionOne() {
+  function List({ text }: { text: string }) {
+    return (
+      <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+        <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+          {checkIcon}
+        </span>
+        {text}
+      </p>
+    );
+  }
 
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
@@ -67,6 +69,6 @@ function AboutSectionOne () {
       </div>
     </section>
   );
-};
+}
 
 export default AboutSectionOne;

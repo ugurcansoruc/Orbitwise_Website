@@ -1,4 +1,4 @@
-const SharePost = () => {
+function SharePost () {
   return (
     <>
       <a

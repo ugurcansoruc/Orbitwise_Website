@@ -1,26 +1,25 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
-import menuData from "./menuData";
 import LocaleSwitcher from "components/LocaleSwitcher";
 import NavigationLink from "components/NavigationLink";
+import ThemeToggler from "./ThemeToggler";
+import menuData from "./menuData";
 
-import { useTranslations } from "next-intl";
-
-const Header = () => {
+function Header () {
   const t = useTranslations('HeaderPage');
 
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const navbarToggleHandler = () => {
+  function navbarToggleHandler () {
     setNavbarOpen(!navbarOpen);
   };
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
-  const handleStickyNavbar = () => {
+  function handleStickyNavbar () {
     if (window.scrollY >= 80) {
       setSticky(true);
     } else {
@@ -33,7 +32,7 @@ const Header = () => {
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
-  const handleSubmenu = (index: number) => {
+  function handleSubmenu (index: number) {
     if (openIndex === index) {
       setOpenIndex(-1);
     } else {

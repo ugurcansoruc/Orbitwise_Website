@@ -1,11 +1,10 @@
 "use client";
-
-import clsx from "clsx";
+import { Listbox } from "@headlessui/react";
+import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
-import { ChangeEvent, useTransition } from "react";
-import { Listbox } from "@headlessui/react";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import { useTransition } from "react";
 
 export default function LocaleSwitcher() {
   const t = useTranslations("LocaleSwitcher");
@@ -26,21 +25,24 @@ export default function LocaleSwitcher() {
   return (
     <>
       <Listbox value={locale} onChange={onSelectChange}>
-        <div >
+        <div>
           <Listbox.Button className="bg-gray-2 dark:bg-dark-bg flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-black dark:text-white md:h-10 md:w-10">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 {locale === "tr" ? (
-                  <img
+                  <Image
                     src="/images/languages/turkey-svgrepo-com.svg"
                     alt="Turkish Icon"
-                    className="h-full"
+                    width={100}
+                    height={100}
                   />
                 ) : (
-                  <img
+                  <Image
                     src="/images/languages/united-states-svgrepo-com.svg"
                     alt="English Icon"
                     className="h-full"
+                    width={100}
+                    height={100}
                   />
                 )}
               </div>
@@ -62,16 +64,20 @@ export default function LocaleSwitcher() {
                   <>
                     <span className="block flex items-center">
                       {cur === "tr" ? (
-                        <img
+                        <Image
                           src="/images/languages/turkey-svgrepo-com.svg"
                           alt="Turkish Icon"
                           className="mr-2 h-6 w-6"
+                          width={100}
+                          height={100}
                         />
                       ) : (
-                        <img
+                        <Image
                           src="/images/languages/united-states-svgrepo-com.svg"
                           alt="English Icon"
                           className="mr-2 h-6 w-6"
+                          width={100}
+                          height={100}
                         />
                       )}
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const RelatedPost = ({
+function RelatedPost ({
   image,
   slug,
   title,
@@ -11,7 +11,7 @@ const RelatedPost = ({
   slug: string;
   title: string;
   date: string;
-}) => {
+}) {
   return (
     <div className="flex items-center lg:block xl:flex">
       <div className="mr-5 lg:mb-3 xl:mb-0">

@@ -1,6 +1,6 @@
 import NewsLatterBox from "./NewsLatterBox";
 
-const Contact = () => {
+function Contact () {
   return (
     <section id="contact" className=" py-16 md:py-20 lg:py-28">
       <div className="container">

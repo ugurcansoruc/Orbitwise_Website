@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 
-const ThemeToggler = () => {
+function ThemeToggler () {
   const { theme, setTheme } = useTheme();
   return (
     <button

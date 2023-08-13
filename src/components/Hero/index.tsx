@@ -1,9 +1,8 @@
-import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import SectionTitle from "components/Common/SectionTitle";
-import Image from "next/image";
 
-const Hero = () => {
+function Hero () {
   const t = useTranslations("HeroComponent");
   return (
     <>

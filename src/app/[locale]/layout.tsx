@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import { createTranslator, NextIntlClientProvider } from "next-intl";
 import { ReactNode } from "react";
 import Footer from "components/Footer";
-import ScrollToTop from "components/ScrollToTop";
 import Header from "components/Header";
+import ScrollToTop from "components/ScrollToTop";
 import { Providers } from "./providers";
 
 type Props = {

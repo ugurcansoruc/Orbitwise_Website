@@ -1,7 +1,7 @@
-import { Brand } from "@../../types/brand";
 import Image from "next/image";
+import { Brand } from "@../../types/brand";
 
-const brandsData: Brand[] = [
+const brandsData: Array<Brand> = [
   {
     id: 1,
     name: "UIdeck",
@@ -34,7 +34,7 @@ const brandsData: Brand[] = [
   },
 ];
 
-const Brands = () => {
+function Brands () {
   return (
     <section className="pt-16">
       <div className="container">
@@ -58,7 +58,7 @@ const Brands = () => {
 
 export default Brands;
 
-const SingleBrand = ({ brand }: { brand: Brand }) => {
+function SingleBrand ({ brand }: { brand: Brand }) {
   const { href, image, name } = brand;
 
   return (

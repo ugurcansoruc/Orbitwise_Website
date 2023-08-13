@@ -1,10 +1,10 @@
-const PricingBox = (props: {
+function PricingBox (props: {
   price: string;
   duration: string;
   packageName: string;
   subtitle: string;
   children: React.ReactNode;
-}) => {
+}) {
   const { price, duration, packageName, subtitle, children } = props;
 
   return (

@@ -1,6 +1,6 @@
 import { Feature } from "@../../types/feature";
 
-const featuresData: Feature[] = [
+const featuresData: Array<Feature> = [
   {
     id: 1,
     icon: (

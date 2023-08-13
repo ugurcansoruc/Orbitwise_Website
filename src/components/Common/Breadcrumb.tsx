@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-const Breadcrumb = ({
+function Breadcrumb ({
   pageName,
   description,
 }: {
   pageName: string;
   description: string;
-}) => {
+}) {
   return (
     <>
       <section className="relative z-10 pt-28 lg:pt-[150px]">

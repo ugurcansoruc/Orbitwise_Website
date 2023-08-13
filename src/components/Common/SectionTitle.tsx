@@ -1,4 +1,4 @@
-const SectionTitle = ({
+function SectionTitle ({
   title,
   paragraph,
   width = "800px",
@@ -10,7 +10,7 @@ const SectionTitle = ({
   width?: string;
   center?: boolean;
   mb?: string;
-}) => {
+}) {
   return (
     <>
       <div
