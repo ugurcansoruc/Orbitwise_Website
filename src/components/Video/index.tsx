@@ -1,12 +1,10 @@
 "use client";
-
 import Image from "next/image";
 import { useState } from "react";
+import ModalVideo from "react-modal-video";
 import SectionTitle from "../Common/SectionTitle";
 
-import ModalVideo from "react-modal-video";
-
-const Video = () => {
+function Video () {
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -57,11 +55,11 @@ const Video = () => {
         videoId="L61p2uyiMSo"
         onClose={() => setOpen(false)}
       />
-*/}
+*/
+}
 
-      <div className="absolute bottom-0 left-0 right-0 z-[-1]">
-        <img src="/images/video/shape.svg" alt="shape" className="w-full" />
-      </div>
+      <Image className="absolute bottom-0 left-0 right-0 z-[-1] w-full" src="/images/video/shape.svg" alt="shape" width={200} height={200}/>
+      
     </section>
   );
 };

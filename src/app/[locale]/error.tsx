@@ -9,10 +9,9 @@ type Props = {
 };
 
 export default function Error({error, reset}: Props) {
-  const t = useTranslations('Error');
-
   useEffect(() => {
     console.error(error);
+    console.log(reset);
   }, [error]);
 
   return (

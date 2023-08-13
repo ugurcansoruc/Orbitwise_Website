@@ -1,6 +1,6 @@
 import { Blog } from "@../../types/blog";
 
-const blogData: Blog[] = [
+const blogData: Array<Blog> = [
   {
     id: 1,
     title: "Best UI components for modern websites",

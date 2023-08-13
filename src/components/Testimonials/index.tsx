@@ -2,7 +2,7 @@ import { Testimonial } from "@../../types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 
-const testimonialData: Testimonial[] = [
+const testimonialData: Array<Testimonial> = [
   {
     id: 1,
     name: "Musharof Chy",
@@ -32,7 +32,7 @@ const testimonialData: Testimonial[] = [
   },
 ];
 
-const Testimonials = () => {
+function Testimonials () {
   return (
     <section className="relative z-10 bg-primary/[.03] py-16 md:py-20 lg:py-28">
       <div className="container">

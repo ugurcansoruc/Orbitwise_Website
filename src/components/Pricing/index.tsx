@@ -4,7 +4,7 @@ import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 
-const Pricing = () => {
+function Pricing () {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (

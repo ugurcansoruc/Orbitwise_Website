@@ -13,5 +13,20 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off'
       }
     }
-  ]
+  ],
+  rules : {
+    'prettier/prettier':0,
+    'react/jsx-sort-props': [
+      2,
+      {
+          'callbacksLast': true,
+          'shorthandFirst': false,
+          'shorthandLast': true,
+          'ignoreCase': true,
+          'noSortAlphabetically': true
+      }
+  ],
+  '@typescript-eslint/no-extra-semi': 'off',
+  '@typescript-eslint/no-unused-vars': 'off',
+  },
 };

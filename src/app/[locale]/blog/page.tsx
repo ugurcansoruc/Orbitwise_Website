@@ -2,7 +2,7 @@ import SingleBlog from "@/../components/Blog/SingleBlog";
 import blogData from "@/../components/Blog/blogData";
 import Breadcrumb from "@/../components/Common/Breadcrumb";
 
-const Blog = () => {
+function Blog () {
   return (
     <>
       <Breadcrumb
@@ -62,7 +62,7 @@ const Blog = () => {
                   </a>
                 </li>
                 <li className="mx-1">
-                  <a className="flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color">
+                  <a href="#0" className="flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-body-color">
                     ...
                   </a>
                 </li>
