@@ -35,5 +35,30 @@
   {
     "Header":"Building The Future of Learning With CubeSat Tech",
     "Content":"Our mission is to enhance hands-on STEM education by bringing satellite technology to our future scientists and engineers. Our custom-built educational CubeSats are designed for high school and university students looking to explore the fundamentals of satellite mechanics and electronic software."
+  },
+  "AboutPage":
+  {
+    "Header":"About Us",
+    "Content":"OrbitWise began with a vision to transform the learning landscape of satellite technology. We manufacture educational CubeSats, miniature web-enabled satellites that provide hands-on learning to aspiring satellite technologists. Our CubeSats are specially designed to open doors to real-world satellite technology for high school and university students, offering them a holistic understanding of satellite mechanism and electronic software."
+  },
+  "AboutSectionOne":
+  {
+    "Header":"Why Choose OrbitWise CubeSats?",
+    "Content":"Our CubeSats are not just satellites; they're launching pads for curiosity and innovation. We empower students to reach beyond textbooks and excel in the fields of satellite technology and aerospace. Not only do our CubeSats lay the groundwork for grasping elementary information in the satellite field, but they also foster critical thinking, problem-solving, and teamwork skills."
+  },
+  "AboutSectionTwo":
+  {
+    "Item_1_Header":"Inspiring Students:",
+    "Item_1_Content":"Our CubeSats are not just satellites, they are launch platforms for curiosity and innovation. We empower students to go beyond textbooks and excel in satellite technology and aerospace.",
+    "Item_2_Header":"Supporting Hands-on Learning:",
+    "Item_2_Content":"Our CubeSats go beyond providing a great foundation for grasping satellite basics. They provide students with practical learning opportunities that give them real-world experience.",
+    "Item_3_Header":"We Encourage Creativity and Innovation:",
+    "Item_3_Content":"Our CubeSats allow students to develop their creative thinking skills and come up with innovative solutions. In this way, future leaders develop the skills to solve complex problems.",
+    "Item_4_Header":"Empowering Critical Thinking:",
+    "Item_4_Content":"Our CubeSats are an excellent tool for teaching students critical thinking skills. The challenges faced during satellite design and operation help students strengthen their analytical thinking skills.",
+    "Item_5_Header":"Developing Problem Solving and Collaboration Skills:",
+    "Item_5_Content":"The CubeSats project provides students with the opportunity to solve real-world problems and collaborate in multidisciplinary teams. This experience helps students become more effective and efficient team members in their future careers.",
+    "Item_6_Header":"Raising Future Space and Technology Leaders:",
+    "Item_6_Content":"Our CubeSats enable young people to grow as leaders in space and technology. Through these projects, students develop the skills to manage and lead effective projects on a global scale."
   }
 }

@@ -17,10 +17,11 @@ export default function IndexPage() {
     <>      
       <ScrollUp />
       <Hero />
-      <Video />
-      <Brands />
       <AboutSectionOne />
       <AboutSectionTwo />
+      <Video />
+      <Brands />
+
       <Features/>
       <Testimonials />
       <Pricing />

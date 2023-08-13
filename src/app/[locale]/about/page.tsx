@@ -1,15 +1,17 @@
 'use client';
 
+import { useTranslations } from "next-intl";
 import AboutSectionOne from "@/../components/About/AboutSectionOne";
 import AboutSectionTwo from "@/../components/About/AboutSectionTwo";
 import Breadcrumb from "@/../components/Common/Breadcrumb";
 
 export default function AboutPage() {
+  const t = useTranslations('AboutPage');
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName={t('Header')}
+        description={t('Content')}
       />
       <AboutSectionOne />
       <AboutSectionTwo />

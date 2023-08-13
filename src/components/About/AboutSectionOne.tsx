@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import SectionTitle from "../Common/SectionTitle";
 
 const checkIcon = (
@@ -8,6 +9,7 @@ const checkIcon = (
 );
 
 function AboutSectionOne() {
+  const t = useTranslations("AboutSectionOne");
   function List({ text }: { text: string }) {
     return (
       <p className="mb-5 flex items-center text-lg font-medium text-body-color">
@@ -26,8 +28,8 @@ function AboutSectionOne() {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title={t("Header")}
+                paragraph={t("Content")}
                 mb="44px"
               />
 
@@ -57,10 +59,10 @@ function AboutSectionOne() {
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full lg:mr-0"
+                  src="/images/about/8-pscak0rconW5Apk-removebg-preview.png"
+                  alt="cubesat image"
+                  width={500}
+                  height={500}
                 />
               </div>
             </div>
