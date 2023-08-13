@@ -1,15 +1,12 @@
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 
-function Breadcrumb ({
+function Breadcrumb({
   pageName,
   description,
 }: {
   pageName: string;
   description: string;
 }) {
-
-  const t = useTranslations('HeaderPage');
   return (
     <>
       <section className="relative z-10 pt-28 lg:pt-[150px]">
@@ -33,9 +30,9 @@ function Breadcrumb ({
                       href="/"
                       className="pr-1 text-base font-medium text-body-color hover:text-primary"
                     >
-                      {t('Home')}
+                      Home
                     </Link>
-                    <span className="mr-3 block h-2 w-2 rotate-45 border-t-2 border-r-2 border-body-color"></span>
+                    <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
                   </li>
                   <li className="text-base font-medium text-primary">
                     {pageName}
@@ -47,7 +44,7 @@ function Breadcrumb ({
         </div>
 
         <div>
-          <span className="absolute top-0 left-0 z-[-1]">
+          <span className="absolute left-0 top-0 z-[-1]">
             <svg
               width="287"
               height="254"
@@ -123,6 +120,6 @@ function Breadcrumb ({
       </section>
     </>
   );
-};
+}
 
 export default Breadcrumb;
