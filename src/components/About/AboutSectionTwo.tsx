@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Accordion, AccordionItem, Image, Avatar } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 
 function AboutSectionTwo() {
@@ -13,69 +13,140 @@ function AboutSectionTwo() {
               data-wow-delay=".15s"
             >
               <Image
-                src="/images/about/8-oDEV92Mz5OeREKj-removebg-preview.png"
+                isBlurred
+                width={600}
+                height={600}
+                src="/images/about/about_all_in.png"
                 alt="cubesat image"
-                width={500}
-                height={500}
               />
             </div>
-            <div className="wow fadeInUp max-w-[800px]">
-                <div className="mb-9">
-                  <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                    {t("Item_1_Header")}
-                  </h3>
-                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                    {t("Item_1_Content")}
-                  </p>
-                </div>
-
-                <div className="mb-9">
-                  <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                    {t("Item_2_Header")}
-                  </h3>
-                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                    {t("Item_2_Content")}
-                  </p>
-                </div>
-              </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <div className="wow fadeInUp max-w-[800px]" data-wow-delay=".2s">
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  {t("Item_3_Header")}
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+              <Accordion
+                motionProps={{
+                  variants: {
+                    enter: {
+                      y: 0,
+                      opacity: 1,
+                      height: "auto",
+                      transition: {
+                        height: {
+                          type: "spring",
+                          stiffness: 500,
+                          damping: 30,
+                          duration: 1,
+                        },
+                        opacity: {
+                          easings: "ease",
+                          duration: 1,
+                        },
+                      },
+                    },
+                    exit: {
+                      y: -10,
+                      opacity: 0,
+                      height: 0,
+                      transition: {
+                        height: {
+                          easings: "ease",
+                          duration: 0.25,
+                        },
+                        opacity: {
+                          easings: "ease",
+                          duration: 0.3,
+                        },
+                      },
+                    },
+                  },
+                }}
+              >
+                <AccordionItem
+                  key="1"
+                  title={t("Item_1_Header")}
+                  startContent={
+                    <Avatar
+                      isBordered
+                      size="lg"
+                      radius="lg"
+                      src="/images/about/about_rocket.png"
+                    />
+                  }
+                >
+                  {t("Item_1_Content")}
+                </AccordionItem>
+
+                <AccordionItem
+                  key="2"
+                  title={t("Item_2_Header")}
+                  startContent={
+                    <Avatar
+                      isBordered
+                      size="lg"
+                      radius="lg"
+                      src="/images/about/about_book.png"
+                    />
+                  }
+                >
+                  {t("Item_2_Content")}
+                </AccordionItem>
+                <AccordionItem
+                  key="3"
+                  title={t("Item_3_Header")}
+                  startContent={
+                    <Avatar
+                      isBordered
+                      size="lg"
+                      radius="lg"
+                      src="/images/about/about_innovation.png"
+                    />
+                  }
+                >
                   {t("Item_3_Content")}
-                </p>
-              </div>
-
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  {t("Item_4_Header")}
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                </AccordionItem>
+                <AccordionItem
+                  key="4"
+                  title={t("Item_4_Header")}
+                  startContent={
+                    <Avatar
+                      isBordered
+                      size="lg"
+                      radius="lg"
+                      src="/images/about/about_gearwheel.png"
+                    />
+                  }
+                >
                   {t("Item_4_Content")}
-                </p>
-              </div>
-
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  {t("Item_5_Header")}
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                </AccordionItem>
+                <AccordionItem
+                  key="5"
+                  title={t("Item_5_Header")}
+                  startContent={
+                    <Avatar
+                      isBordered
+                      size="lg"
+                      radius="lg"
+                      src="/images/about/about_puzzle.png"
+                    />
+                  }
+                >
                   {t("Item_5_Content")}
-                </p>
-              </div>
-
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  {t("Item_6_Header")}
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                </AccordionItem>
+                <AccordionItem
+                  key="6"
+                  title={t("Item_6_Header")}
+                  startContent={
+                    <Avatar
+                      isBordered
+                      size="lg"
+                      radius="lg"
+                      src="/images/about/about_world.png"
+                    />
+                  }
+                >
                   {t("Item_6_Content")}
-                </p>
-              </div>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </div>
