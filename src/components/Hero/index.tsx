@@ -1,4 +1,4 @@
-import Image from "next/image";
+import {Image } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 import SectionTitle from "components/Common/SectionTitle";
 
@@ -24,7 +24,8 @@ function Hero () {
                 />
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                 <Image
-                src="/images/hero/8-GFrDUVjE0hcs70t-removebg.png"
+                isBlurred
+                src="/images/hero/cubesat_generated_ai_in_space-removebg-preview_square.png"
                 alt="cubesat image"
                 width={500}
                 height={500}
