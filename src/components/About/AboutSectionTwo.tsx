@@ -6,23 +6,23 @@ function AboutSectionTwo() {
   return (
     <section className="py-16 md:py-20 lg:py-10">
       <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
+        <div className="-mx-4 flex flex-wrap ">
           <div className="w-full px-4 lg:w-1/2">
             <div
-              className="wow fadeInUp relative mx-auto mb-12 aspect-[25/12] max-w-[800px] text-center lg:m-0"
+              className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
               data-wow-delay=".15s"
             >
               <Image
                 isBlurred
-                width={600}
-                height={600}
+                width={550}
+                height={550}
                 src="/images/about/about_all_in.png"
                 alt="cubesat image"
               />
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">
-            <div className="wow fadeInUp max-w-[800px]" data-wow-delay=".2s">
+            <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0" data-wow-delay=".2s">
               <Accordion
                 motionProps={{
                   variants: {
