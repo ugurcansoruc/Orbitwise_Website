@@ -44,7 +44,13 @@
   "AboutSectionOne":
   {
     "Header":"Neden OrbitWise CubeSats'i Seçmelisiniz?",
-    "Content":"CubeSat'larımız sadece uydu değil; merak ve inovasyon için fırlatma rampalarıdır. Öğrencileri ders kitaplarının ötesine geçmeleri ve uydu teknolojisi ve havacılık alanlarında başarılı olmaları için güçlendiriyoruz. CubeSat'larımız sadece uydu alanındaki temel bilgileri kavramak için zemin hazırlamakla kalmıyor, aynı zamanda eleştirel düşünme, problem çözme ve ekip çalışması becerilerini de geliştiriyor."
+    "Content":"CubeSat'larımız sadece uydu değil; merak ve inovasyon için fırlatma rampalarıdır. Öğrencileri ders kitaplarının ötesine geçmeleri ve uydu teknolojisi ve havacılık alanlarında başarılı olmaları için güçlendiriyoruz. CubeSat'larımız sadece uydu alanındaki temel bilgileri kavramak için zemin hazırlamakla kalmıyor, aynı zamanda eleştirel düşünme, problem çözme ve ekip çalışması becerilerini de geliştiriyor.",
+    "Item_1":"Yüksek kalite standartları",
+    "Item_2":"Kullanımı kolay tasarım",
+    "Item_3":"Uzun ömürlü kullanım imkanı",
+    "Item_4":"Gelişmiş programlama uyumluluğu",
+    "Item_5":"Detaylı ve kapsamlı kılavuz",
+    "Item_6":"Geliştirici dostu yaklaşım"
   },
   "AboutSectionTwo":
   {

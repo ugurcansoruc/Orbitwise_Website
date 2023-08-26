@@ -1,4 +1,4 @@
-import Image from "next/image";
+import {Image } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 import SectionTitle from "../Common/SectionTitle";
 
@@ -26,7 +26,7 @@ function AboutSectionOne() {
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
+            <div className="w-full px-4 lg:w-2/3">
               <SectionTitle
                 title={t("Header")}
                 paragraph={t("Content")}
@@ -34,35 +34,36 @@ function AboutSectionOne() {
               />
 
               <div
-                className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
+                className="wow fadeInUp mb-12 max-w-[800px] lg:mb-0"
                 data-wow-delay=".15s"
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text={t('Item_1')} />
+                    <List text={t('Item_2')} />
+                    <List text={t('Item_3')} />
                   </div>
-
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text={t('Item_4')} />
+                    <List text={t('Item_5')} />
+                    <List text={t('Item_6')} />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="w-full px-4 lg:w-1/2">
+            <div className="w-full px-4 lg:w-1/3">
               <div
                 className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/about/8-pscak0rconW5Apk-removebg-preview.png"
+                  isBlurred
+                  src="/images/about/DreamShaper_v7_Our_CubeSats_are_not_just_satellites_theyre_lau_0.jpg"
                   alt="cubesat image"
                   width={500}
                   height={500}
+                  
                 />
               </div>
             </div>
