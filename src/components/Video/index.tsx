@@ -4,15 +4,15 @@ import { useState } from "react";
 import ModalVideo from "react-modal-video";
 import SectionTitle from "../Common/SectionTitle";
 
-function Video () {
+function Video ({Header, Content}:{Header:string, Content:string}) {
   const [isOpen, setOpen] = useState(false);
 
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title={Header}
+          paragraph={Content}
           center
           mb="80px"
         />

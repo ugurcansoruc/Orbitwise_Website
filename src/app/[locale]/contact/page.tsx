@@ -10,7 +10,6 @@ function ContactPage () {
   const TranslateContactPageT = useTranslations('ContactPageT');
   const TranslateContactFormT = useTranslations('ContactFormT');
 
-  //Contact translation
   const _ContactFormT : ContactFormT = {
     HeaderName: TranslateContactFormT('HeaderName'),
     PlaceholderName: TranslateContactFormT('PlaceholderName'),
@@ -23,7 +22,7 @@ function ContactPage () {
   const _ContactPageT : ContactPageT = {
     Header:TranslateContactPageT('Header'),
     Content:TranslateContactPageT('Content'),
-    _ContactFormT: _ContactFormT
+    _ContactFormT,
   }
 
   return (

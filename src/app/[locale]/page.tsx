@@ -16,8 +16,8 @@ import { ContactPageT, ContactFormT } from "types/contactPageTranslation";
 export default function IndexPage() {
   const TranslateContactPageT = useTranslations('ContactPageT');
   const TranslateContactFormT = useTranslations('ContactFormT');
+  const TranslateVideoComponent = useTranslations('Video_Component');
 
-  //Contact translation
   const _ContactFormT : ContactFormT = {
     HeaderName: TranslateContactFormT('HeaderName'),
     PlaceholderName: TranslateContactFormT('PlaceholderName'),
@@ -30,7 +30,7 @@ export default function IndexPage() {
   const _ContactPageT : ContactPageT = {
     Header:TranslateContactPageT('Header'),
     Content:TranslateContactPageT('Content'),
-    _ContactFormT: _ContactFormT
+    _ContactFormT,
   }
 
   return (
@@ -39,7 +39,7 @@ export default function IndexPage() {
       <Hero />
       <AboutSectionOne />
       <AboutSectionTwo />
-      <Video />
+      <Video Header={TranslateVideoComponent('Header')} Content={TranslateVideoComponent('Content')}/>
       {
         /*
         <Brands />
