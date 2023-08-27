@@ -20,6 +20,8 @@ function ContactPage () {
     HeaderMessage: TranslateContactFormT('HeaderMessage'),
     PlaceholderMessage: TranslateContactFormT('PlaceholderMessage'),
     Submit: TranslateContactFormT('Submit'),
+    ModalMessageSuccess: TranslateContactFormT('MailSendSuccess'),
+    ModalMessageFail: TranslateContactFormT('MailSendFail')
   }
   const _ContactPageT : ContactPageT = {
     Header:TranslateContactPageT('Header'),

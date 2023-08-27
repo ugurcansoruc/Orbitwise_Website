@@ -78,7 +78,9 @@
     "PlaceholderMail": "Enter your email",
     "HeaderMessage": "Your Message",
     "PlaceholderMessage": "Enter your message",
-    "Submit": "Submit Message"
+    "Submit": "Submit Message",
+    "MailSendSuccess":"Your message has reached the Orbitwise team. We will get back to you as soon as possible. Have a good day.",
+    "MailSendFail":"Your message could not be sent to the Orbitwise team due to a technical glitch. We will solve the problem as soon as possible. Have a good day."
   },
   "NewsLatterBoxT":{
     "Header": "Subscribe to receive future updates",

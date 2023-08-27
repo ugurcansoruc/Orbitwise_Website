@@ -6,6 +6,8 @@ export type ContactFormT = {
     HeaderMessage: any;
     PlaceholderMessage: any;
     Submit: any;
+    ModalMessageSuccess: any;
+    ModalMessageFail: any;
 }
 
 export type ContactPageT = {

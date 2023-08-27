@@ -20,7 +20,7 @@ const Contact: FC<ContactProps> = ({
 }) => {
   const { register, handleSubmit } = useForm<MailFormData>();
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
-
+  
   async function onSubmit(data: MailFormData) {
     try {
       const emailSent = await sendEmail(data); // await kullanarak sendEmail fonksiyonunu bekleyin
@@ -41,9 +41,9 @@ const Contact: FC<ContactProps> = ({
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">Orbitwise</ModalHeader>
               <ModalBody>
-                
+               {_ContactPageTranslate._ContactFormT.ModalMessageSuccess}
               </ModalBody>
             </>
           )}
