@@ -1,13 +1,18 @@
+'use client';
+
+import { useTranslations } from "next-intl";
 import SingleBlog from "@/../components/Blog/SingleBlog";
 import blogData from "@/../components/Blog/blogData";
 import Breadcrumb from "@/../components/Common/Breadcrumb";
 
 function Blog () {
+  const tPage = useTranslations('HeaderPage');
   return (
     <>
       <Breadcrumb
         pageName="Blog Grid"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        mainPageName={tPage('Home')}
       />
 
       <section className="pt-[120px] pb-[120px]">

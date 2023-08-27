@@ -66,5 +66,10 @@
     "Item_5_Content":"CubeSats projesi, öğrencilere gerçek dünyadaki problemleri çözme ve çok disiplinli ekiplerde işbirliği yapma fırsatı sunar. Bu deneyim, öğrencilerin gelecekteki kariyerlerinde daha etkili ve verimli ekip üyeleri olmalarına yardımcı olur.",
     "Item_6_Header":"Geleceğin Uzay ve Teknoloji Liderlerini Yetiştiriyoruz",
     "Item_6_Content":"CubeSats'larımız, gençlerin uzay ve teknoloji alanlarındaki liderler olarak yetişmelerine olanak sağlar. Bu projeler sayesinde öğrenciler, küresel ölçekte etkili projeler yönetme ve yönlendirme becerilerini geliştirirler."
+  },
+  "Video_Component":
+  {
+    "Header":"",
+    "Content":""
   }
 }

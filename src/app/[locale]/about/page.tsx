@@ -7,11 +7,13 @@ import Breadcrumb from "@/../components/Common/Breadcrumb";
 
 export default function AboutPage() {
   const t = useTranslations('AboutPage');
+  const tPage = useTranslations('HeaderPage');
   return (
     <>
       <Breadcrumb
         pageName={t('Header')}
         description={t('Content')}
+        mainPageName={tPage('Home')}
       />
       <AboutSectionOne />
       <AboutSectionTwo />

@@ -62,5 +62,10 @@
     "Item_5_Content": "The CubeSats project provides students with the opportunity to solve real-world problems and collaborate in multidisciplinary teams. This experience helps students become more effective and efficient team members in their future careers.",
     "Item_6_Header": "Raising Future Space and Technology Leaders",
     "Item_6_Content": "Our CubeSats enable young people to grow as leaders in space and technology. Through these projects, students develop the skills to manage and lead effective projects on a global scale."
+  },
+  "Video_Component":
+  {
+    "Header":"",
+    "Content":""
   }
 }
