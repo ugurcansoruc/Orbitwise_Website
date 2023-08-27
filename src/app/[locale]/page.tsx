@@ -12,11 +12,13 @@ import Pricing from 'components/Pricing';
 import Testimonials from 'components/Testimonials';
 import Video from 'components/Video';
 import { ContactPageT, ContactFormT } from "types/contactPageTranslation";
+import { NewsLatterBoxT } from 'types/newsLatterBoxTranslation';
 
 export default function IndexPage() {
   const TranslateContactPageT = useTranslations('ContactPageT');
   const TranslateContactFormT = useTranslations('ContactFormT');
   const TranslateVideoComponent = useTranslations('Video_Component');
+  const TranslationNewsLatterBoxT = useTranslations("NewsLatterBoxT");
 
   const _ContactFormT : ContactFormT = {
     HeaderName: TranslateContactFormT('HeaderName'),
@@ -32,6 +34,15 @@ export default function IndexPage() {
     Content:TranslateContactPageT('Content'),
     _ContactFormT,
   }
+
+  const _NewsLatterBoxT: NewsLatterBoxT = {
+    Header: TranslationNewsLatterBoxT("Header"),
+    Content: TranslationNewsLatterBoxT("Content"),
+    PlaceholderName: TranslationNewsLatterBoxT("PlaceholderName"),
+    PlaceholderMail: TranslationNewsLatterBoxT("PlaceholderMail"),
+    Subscribe: TranslationNewsLatterBoxT("Subscribe"),
+    SubContent: TranslationNewsLatterBoxT("SubContent"),
+  };
 
   return (
     <>      
@@ -49,7 +60,7 @@ export default function IndexPage() {
       <Blog />
         */
       }
-      <Contact ContactPageTranslate={_ContactPageT}/>
+      <Contact ContactPageTranslate={_ContactPageT} _NewsLatterBoxT={_NewsLatterBoxT}/>
     </>
   );
 }

@@ -4,11 +4,13 @@ import { useTranslations } from "next-intl";
 import Breadcrumb from "@/../components/Common/Breadcrumb";
 import Contact from "@/../components/Contact";
 import { ContactFormT, ContactPageT } from "types/contactPageTranslation";
+import { NewsLatterBoxT } from "types/newsLatterBoxTranslation";
 
 function ContactPage () {
   const tPage = useTranslations('HeaderPage');
   const TranslateContactPageT = useTranslations('ContactPageT');
   const TranslateContactFormT = useTranslations('ContactFormT');
+  const TranslationNewsLatterBoxT = useTranslations("NewsLatterBoxT");
 
   const _ContactFormT : ContactFormT = {
     HeaderName: TranslateContactFormT('HeaderName'),
@@ -25,6 +27,15 @@ function ContactPage () {
     _ContactFormT,
   }
 
+  const _NewsLatterBoxT: NewsLatterBoxT = {
+    Header: TranslationNewsLatterBoxT("Header"),
+    Content: TranslationNewsLatterBoxT("Content"),
+    PlaceholderName: TranslationNewsLatterBoxT("PlaceholderName"),
+    PlaceholderMail: TranslationNewsLatterBoxT("PlaceholderMail"),
+    Subscribe: TranslationNewsLatterBoxT("Subscribe"),
+    SubContent: TranslationNewsLatterBoxT("SubContent"),
+  };
+
   return (
     <>
       <Breadcrumb
@@ -33,7 +44,7 @@ function ContactPage () {
         mainPageName={tPage('Home')}
       />
 
-      <Contact ContactPageTranslate={_ContactPageT}/>
+      <Contact ContactPageTranslate={_ContactPageT} _NewsLatterBoxT={_NewsLatterBoxT}/>
     </>
   );
 };

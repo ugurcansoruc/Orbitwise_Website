@@ -68,7 +68,7 @@
     "Content": "OrbitWise offers a range of educational solutions customized to your needs. Whether you are a high school looking to supplement your science curriculum or a university looking to provide your engineering students with sharp resources, OrbitWise is your one-stop solution."
   },
   "ContactPageT": {
-    "Header": "Need Help? Open a Ticket",
+    "Header": "Need Help? Send a Message",
     "Content": "Our support team will get back to you ASAP via email."
   },
   "ContactFormT": {
@@ -78,6 +78,14 @@
     "PlaceholderMail": "Enter your email",
     "HeaderMessage": "Your Message",
     "PlaceholderMessage": "Enter your message",
-    "Submit": "Submit Ticket"
+    "Submit": "Submit Message"
+  },
+  "NewsLatterBoxT":{
+    "Header": "Subscribe to receive future updates",
+    "Content": "Every Sunday, we will deliver to you a summary of the week's space events and developments.",
+    "PlaceholderName": "Enter your name",
+    "PlaceholderMail": "Enter your email",
+    "Subscribe": "Subscribe",
+    "SubContent": "No spam guaranteed, So please don’t send any spam mail."
   }
 }

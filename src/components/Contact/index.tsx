@@ -1,7 +1,8 @@
 import { ContactPageT } from "types/contactPageTranslation";
+import { NewsLatterBoxT } from "types/newsLatterBoxTranslation";
 import NewsLatterBox from "./NewsLatterBox";
 
-function Contact ({ContactPageTranslate}:{ContactPageTranslate:ContactPageT}) {  
+function Contact ({ContactPageTranslate, _NewsLatterBoxT}:{ContactPageTranslate:ContactPageT, _NewsLatterBoxT:NewsLatterBoxT}) {  
   return (
     <section id="contact" className=" py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -76,7 +77,7 @@ function Contact ({ContactPageTranslate}:{ContactPageTranslate:ContactPageT}) {
             </div>
           </div>
           <div className="w-full px-4 lg:w-3/12 xl:w-4/12">
-            <NewsLatterBox />
+            <NewsLatterBox _NewsLatterBoxT={_NewsLatterBoxT}/>
           </div>
         </div>
       </div>

@@ -68,16 +68,24 @@
     "Content": "OrbitWise, ihtiyaçlarınıza göre özelleştirilmiş bir dizi eğitim çözümü sunar. Bilim müfredatınızı tamamlamak isteyen bir lise veya mühendislik öğrencilerinize keskin kaynaklar sağlamak isteyen bir üniversite olun, OrbitWise tek çözümünüzdür."
   },
   "ContactPageT": {
-    "Header": "Yardıma mı İhtiyacınız Var? Bir Bilet Açın",
+    "Header": "Yardıma mı İhtiyacınız Var? Bir Mesaj İletin",
     "Content": "Destek ekibimiz en kısa sürede size e-posta aracılığıyla dönecektir."
-    },
-    "ContactFormT": {
+  },
+  "ContactFormT": {
     "HeaderName": "Adınız",
     "PlaceholderName": "Adınızı girin",
     "HeaderMail": "E-posta Adresiniz",
     "PlaceholderMail": "E-posta adresinizi girin",
     "HeaderMessage": "Mesajınız",
     "PlaceholderMessage": "Mesajınızı girin",
-    "Submit": "Bileti Gönder"
-    }
+    "Submit": "Mesajı Gönder"
+  },
+  "NewsLatterBoxT": {
+    "Header": "Gelecekteki güncellemeleri almak için abone olun",
+    "Content": "Her pazar, o haftanın uzay gelişmelerini özet halinde sizlere ileteceğiz.",
+    "PlaceholderName": "Adınızı girin",
+    "PlaceholderMail": "E-postanızı girin",
+    "Subscribe": "Abone Ol",
+    "SubContent": "Gönderdiğimiz spam garantilidir, bu nedenle lütfen spam e-posta göndermeyin."
+  }
 }
