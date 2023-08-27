@@ -2,10 +2,10 @@
 
 import { FC } from "react";
 import { useForm } from "react-hook-form";
-import { sendEmail } from "../../../utils/send-email";
-import { MailFormData } from "../../types/form";
 import { ContactPageT } from "types/contactPageTranslation";
 import { NewsLatterBoxT } from "types/newsLatterBoxTranslation";
+import { sendEmail } from "../../../utils/send-email";
+import { MailFormData } from "../../types/form";
 import NewsLatterBox from "./NewsLatterBox";
 
 interface ContactProps {

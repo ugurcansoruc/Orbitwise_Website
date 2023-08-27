@@ -37,6 +37,8 @@ module.exports = {
   'react/self-closing-comp':'off',
   'react-hooks/exhaustive-deps':'off',
   'jsx-a11y/no-static-element-interactions':'off',
-  'jsx-a11y/anchor-is-valid':'off'
+  'jsx-a11y/anchor-is-valid':'off',
+  '@typescript-eslint/no-misused-promises': 'off',
+  'func-style': 'off',
   },
 };
