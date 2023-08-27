@@ -1,5 +1,6 @@
 "use client";
 
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
 import { FC } from "react";
 import { useForm } from "react-hook-form";
 import { ContactPageT } from "types/contactPageTranslation";
@@ -18,13 +19,37 @@ const Contact: FC<ContactProps> = ({
   _NewsLatterBoxT,
 }) => {
   const { register, handleSubmit } = useForm<MailFormData>();
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
-  function onSubmit(data: MailFormData) {
-    sendEmail(data);
+  async function onSubmit(data: MailFormData) {
+    try {
+      const emailSent = await sendEmail(data); // await kullanarak sendEmail fonksiyonunu bekleyin
+  
+      if (emailSent) {
+        onOpen(); // Email başarıyla gönderildiğinde onOpen işlevini çağırabilirsiniz
+      } else {
+        // Email gönderilemedi
+      }
+    } catch (error) {
+      // Hata durumları
+    }
   }
 
   return (
     <section id="contact" className=" py-16 md:py-20 lg:py-28">
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+              <ModalBody>
+                
+              </ModalBody>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-9/12 xl:w-8/12">

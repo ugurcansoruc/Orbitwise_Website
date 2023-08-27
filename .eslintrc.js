@@ -40,5 +40,6 @@ module.exports = {
   'jsx-a11y/anchor-is-valid':'off',
   '@typescript-eslint/no-misused-promises': 'off',
   'func-style': 'off',
+  'spaced-comment': 'off',
   },
 };
