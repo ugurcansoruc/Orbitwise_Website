@@ -1,14 +1,14 @@
-import {Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 import SectionTitle from "components/Common/SectionTitle";
 
-function Hero () {
+function Hero() {
   const t = useTranslations("HeroComponent");
   return (
     <>
       <section
         id="home"
-        className="relative z-10 pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[100px] 2xl:pt-[200px]"
+        className="relative z-10 pb-16 pt-[60px] md:pb-[60px] md:pt-[75px] xl:pb-[80px] xl:pt-[90px] 2xl:pb-[50px] 2xl:pt-[100px]"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -17,20 +17,20 @@ function Hero () {
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
+                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                  <Image
+                    isBlurred
+                    src="/images/hero/cubesat_generated_ai_in_space-removebg-preview_square_high_1.png"
+                    alt="cubesat image"
+                    width={500}
+                    height={500}
+                  />
+                </div>
                 <SectionTitle
                   title={t("Header")}
                   paragraph={t("Content")}
                   center
                 />
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <Image
-                isBlurred
-                src="/images/hero/cubesat_generated_ai_in_space-removebg-preview_square.png"
-                alt="cubesat image"
-                width={500}
-                height={500}
-              />
-                </div>
               </div>
             </div>
           </div>
@@ -279,6 +279,6 @@ function Hero () {
       </section>
     </>
   );
-};
+}
 
 export default Hero;
