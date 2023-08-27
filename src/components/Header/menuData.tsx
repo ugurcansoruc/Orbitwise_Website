@@ -14,34 +14,27 @@ const menuData: Array<Menu> = [
     newTab: false,
   },
   {
-    id: 33,
+    id: 3,
     title: "Blog",
     path: "/blog",
     newTab: false,
   },
   {
-    id: 3,
+    id: 4,
     title: "Support",
     path: "/contact",
     newTab: false,
-  },
+  }
+];
+export default menuData;
+
+/*
+,
   {
-    id: 4,
+    id: 6,
     title: "Pages",
     newTab: false,
     submenu: [
-      {
-        id: 41,
-        title: "About_Page",
-        path: "/about",
-        newTab: false,
-      },
-      {
-        id: 42,
-        title: "Contact_Page",
-        path: "/contact",
-        newTab: false,
-      },
       {
         id: 43,
         title: "Blog_Grid_Page",
@@ -59,26 +52,6 @@ const menuData: Array<Menu> = [
         title: "Blog_Details_Page",
         path: "/blog-details",
         newTab: false,
-      },
-      {
-        id: 46,
-        title: "Sign_In_Page",
-        path: "/signin",
-        newTab: false,
-      },
-      {
-        id: 47,
-        title: "Sign_Up_Page",
-        path: "/signup",
-        newTab: false,
-      },
-      {
-        id: 48,
-        title: "Error_Page",
-        path: "/error",
-        newTab: false,
-      },
+      }
     ],
-  },
-];
-export default menuData;
+  },*/
