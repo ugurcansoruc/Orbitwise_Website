@@ -59,14 +59,14 @@ function Header () {
                 } `}
               >
                 <Image
-                  src="/images/logo/orbitwise_logo_kesilmis_no_back.svg"
+                  src="/images/logo/orbitwise_logo_kesilmis_no_back.png"
                   alt="logo"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/orbitwise_logo_kesilmis_no_back.svg"
+                  src="/images/logo/orbitwise_logo_kesilmis_no_back.png"
                   alt="logo"
                   width={140}
                   height={30}
