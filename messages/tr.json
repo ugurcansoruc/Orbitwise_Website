@@ -17,59 +17,67 @@
   "HeaderPage": {
     "title": "Navigasyon barı",
     "description": "Navigasyon barı ile ilgili islemler gerceklestirilmektedir.",
-    "Home":"Ana Sayfa",
+    "Home": "Ana Sayfa",
     "About": "Hakkımızda",
     "Blog": "Blog",
     "Support": "Destek",
     "Pages": "Sayfalar",
-    "About_Page":"About_Page",
-    "Contact_Page":"Contact_Page",
-    "Blog_Grid_Page":"Blog_Grid_Page",
-    "Blog_Sidebar_Page":"Blog_Sidebar_Page",
-    "Blog_Details_Page":"Blog_Details_Page",
-    "Sign_In_Page":"Sign_In_Page",
-    "Sign_Up_Page":"Sign_Up_Page",
-    "Error_Page":"Error_Page"
+    "About_Page": "About_Page",
+    "Contact_Page": "Contact_Page",
+    "Blog_Grid_Page": "Blog_Grid_Page",
+    "Blog_Sidebar_Page": "Blog_Sidebar_Page",
+    "Blog_Details_Page": "Blog_Details_Page",
+    "Sign_In_Page": "Sign_In_Page",
+    "Sign_Up_Page": "Sign_Up_Page",
+    "Error_Page": "Error_Page"
   },
-  "HeroComponent":
-  {
-    "Header":"CubeSat Teknolojisi ile Öğrenmenin Geleceğini İnşa Etmek",
-    "Content":"Misyonumuz, uydu teknolojisini geleceğin bilim insanlarına ve mühendislerine ulaştırarak uygulamalı STEM eğitimini geliştirmektir. Özel yapım eğitim amaçlı CubeSat'larımız, uydu mekaniği ve elektronik yazılımın temellerini keşfetmek isteyen lise ve üniversite öğrencileri için tasarlanmıştır."
+  "HeroComponent": {
+    "Header": "CubeSat Teknolojisi ile Öğrenmenin Geleceğini İnşa Etmek",
+    "Content": "Misyonumuz, uydu teknolojisini geleceğin bilim insanlarına ve mühendislerine ulaştırarak uygulamalı STEM eğitimini geliştirmektir. Özel yapım eğitim amaçlı CubeSat'larımız, uydu mekaniği ve elektronik yazılımın temellerini keşfetmek isteyen lise ve üniversite öğrencileri için tasarlanmıştır."
   },
-  "AboutPage":
-  {
-    "Header":"Hakkımızda",
-    "Content":"OrbitWise, uydu teknolojisinin öğrenme ortamını dönüştürme vizyonuyla yola çıktı. Eğitim amaçlı CubeSat'lar, yani uydu teknolojisi uzmanlarına uygulamalı öğrenim sağlayan minyatür web özellikli uydular üretiyoruz. CubeSat'larımız, lise ve üniversite öğrencilerine gerçek dünyadaki uydu teknolojisinin kapılarını açmak için özel olarak tasarlandı ve onlara uydu mekanizması ve elektronik yazılım hakkında bütünsel bir anlayış sunuyor."
+  "AboutPage": {
+    "Header": "Hakkımızda",
+    "Content": "OrbitWise, uydu teknolojisinin öğrenme ortamını dönüştürme vizyonuyla yola çıktı. Eğitim amaçlı CubeSat'lar, yani uydu teknolojisi uzmanlarına uygulamalı öğrenim sağlayan minyatür web özellikli uydular üretiyoruz. CubeSat'larımız, lise ve üniversite öğrencilerine gerçek dünyadaki uydu teknolojisinin kapılarını açmak için özel olarak tasarlandı ve onlara uydu mekanizması ve elektronik yazılım hakkında bütünsel bir anlayış sunuyor."
   },
-  "AboutSectionOne":
-  {
-    "Header":"Neden OrbitWise CubeSats'i Seçmelisiniz?",
-    "Content":"CubeSat'larımız sadece uydu değil; merak ve inovasyon için fırlatma rampalarıdır. Öğrencileri ders kitaplarının ötesine geçmeleri ve uydu teknolojisi ve havacılık alanlarında başarılı olmaları için güçlendiriyoruz. CubeSat'larımız sadece uydu alanındaki temel bilgileri kavramak için zemin hazırlamakla kalmıyor, aynı zamanda eleştirel düşünme, problem çözme ve ekip çalışması becerilerini de geliştiriyor.",
-    "Item_1":"Yüksek kalite standartları",
-    "Item_2":"Kullanımı kolay tasarım",
-    "Item_3":"Uzun ömürlü kullanım imkanı",
-    "Item_4":"Gelişmiş programlama uyumluluğu",
-    "Item_5":"Detaylı ve kapsamlı kılavuz",
-    "Item_6":"Geliştirici dostu yaklaşım"
+  "AboutSectionOne": {
+    "Header": "Neden OrbitWise CubeSats'i Seçmelisiniz?",
+    "Content": "CubeSat'larımız sadece uydu değil; merak ve inovasyon için fırlatma rampalarıdır. Öğrencileri ders kitaplarının ötesine geçmeleri ve uydu teknolojisi ve havacılık alanlarında başarılı olmaları için güçlendiriyoruz. CubeSat'larımız sadece uydu alanındaki temel bilgileri kavramak için zemin hazırlamakla kalmıyor, aynı zamanda eleştirel düşünme, problem çözme ve ekip çalışması becerilerini de geliştiriyor.",
+    "Item_1": "Yüksek kalite standartları",
+    "Item_2": "Kullanımı kolay tasarım",
+    "Item_3": "Uzun ömürlü kullanım imkanı",
+    "Item_4": "Gelişmiş programlama uyumluluğu",
+    "Item_5": "Detaylı ve kapsamlı kılavuz",
+    "Item_6": "Geliştirici dostu yaklaşım"
   },
-  "AboutSectionTwo":
-  {
-    "Item_1_Header":"Öğrencilere İlham Veriyoruz",
-    "Item_1_Content":"CubeSats'larımız sadece uydu değil, aynı zamanda merak ve yenilik için birer fırlatma platformudur. Öğrencilere, ders kitaplarının ötesine geçmeleri için güç veriyoruz ve uydu teknolojisi ile havacılık alanlarında başarılı olmalarını sağlıyoruz.",
-    "Item_2_Header":"Uygulamalı Öğrenimi Destekliyoruz",
-    "Item_2_Content":"CubeSats'larımız, uydu alanında temel bilgileri kavramak için harika bir temel oluşturmanın ötesine geçer. Öğrencilere, gerçek dünya deneyimi kazandıran pratik öğrenim fırsatları sunar.",
-    "Item_3_Header":"Yaratıcılığı ve İnovasyonu Teşvik Ediyoruz",
-    "Item_3_Content":"CubeSats'larımız, öğrencilerin yaratıcı düşünme yeteneklerini geliştirmelerine ve yenilikçi çözümler üretmelerine olanak tanır. Bu sayede geleceğin liderleri, karmaşık sorunlara çözüm getirebilecek yetenekleri geliştirir.",
-    "Item_4_Header":"Eleştirel Düşünmeyi Güçlendiriyoruz",
-    "Item_4_Content":"CubeSats'larımız, öğrencilere eleştirel düşünme yetenekleri kazandırmak için mükemmel bir araçtır. Uydu tasarımı ve işletimi sırasında karşılaşılan zorluklar, öğrencilerin analitik düşünme becerilerini güçlendirmelerine yardımcı olur.",
-    "Item_5_Header":"Problem Çözme ve İşbirliği Becerilerini Geliştiriyoruz",
-    "Item_5_Content":"CubeSats projesi, öğrencilere gerçek dünyadaki problemleri çözme ve çok disiplinli ekiplerde işbirliği yapma fırsatı sunar. Bu deneyim, öğrencilerin gelecekteki kariyerlerinde daha etkili ve verimli ekip üyeleri olmalarına yardımcı olur.",
-    "Item_6_Header":"Geleceğin Uzay ve Teknoloji Liderlerini Yetiştiriyoruz",
-    "Item_6_Content":"CubeSats'larımız, gençlerin uzay ve teknoloji alanlarındaki liderler olarak yetişmelerine olanak sağlar. Bu projeler sayesinde öğrenciler, küresel ölçekte etkili projeler yönetme ve yönlendirme becerilerini geliştirirler."
+  "AboutSectionTwo": {
+    "Item_1_Header": "Öğrencilere İlham Veriyoruz",
+    "Item_1_Content": "CubeSats'larımız sadece uydu değil, aynı zamanda merak ve yenilik için birer fırlatma platformudur. Öğrencilere, ders kitaplarının ötesine geçmeleri için güç veriyoruz ve uydu teknolojisi ile havacılık alanlarında başarılı olmalarını sağlıyoruz.",
+    "Item_2_Header": "Uygulamalı Öğrenimi Destekliyoruz",
+    "Item_2_Content": "CubeSats'larımız, uydu alanında temel bilgileri kavramak için harika bir temel oluşturmanın ötesine geçer. Öğrencilere, gerçek dünya deneyimi kazandıran pratik öğrenim fırsatları sunar.",
+    "Item_3_Header": "Yaratıcılığı ve İnovasyonu Teşvik Ediyoruz",
+    "Item_3_Content": "CubeSats'larımız, öğrencilerin yaratıcı düşünme yeteneklerini geliştirmelerine ve yenilikçi çözümler üretmelerine olanak tanır. Bu sayede geleceğin liderleri, karmaşık sorunlara çözüm getirebilecek yetenekleri geliştirir.",
+    "Item_4_Header": "Eleştirel Düşünmeyi Güçlendiriyoruz",
+    "Item_4_Content": "CubeSats'larımız, öğrencilere eleştirel düşünme yetenekleri kazandırmak için mükemmel bir araçtır. Uydu tasarımı ve işletimi sırasında karşılaşılan zorluklar, öğrencilerin analitik düşünme becerilerini güçlendirmelerine yardımcı olur.",
+    "Item_5_Header": "Problem Çözme ve İşbirliği Becerilerini Geliştiriyoruz",
+    "Item_5_Content": "CubeSats projesi, öğrencilere gerçek dünyadaki problemleri çözme ve çok disiplinli ekiplerde işbirliği yapma fırsatı sunar. Bu deneyim, öğrencilerin gelecekteki kariyerlerinde daha etkili ve verimli ekip üyeleri olmalarına yardımcı olur.",
+    "Item_6_Header": "Geleceğin Uzay ve Teknoloji Liderlerini Yetiştiriyoruz",
+    "Item_6_Content": "CubeSats'larımız, gençlerin uzay ve teknoloji alanlarındaki liderler olarak yetişmelerine olanak sağlar. Bu projeler sayesinde öğrenciler, küresel ölçekte etkili projeler yönetme ve yönlendirme becerilerini geliştirirler."
   },
-  "Video_Component":
-  {
-    "Header":"",
-    "Content":""
-  }
+  "Video_Component": {
+    "Header": "",
+    "Content": ""
+  },
+  "ContactPageT": {
+    "Header": "Yardıma mı İhtiyacınız Var? Bir Bilet Açın",
+    "Content": "Destek ekibimiz en kısa sürede size e-posta aracılığıyla dönecektir."
+    },
+    "ContactFormT": {
+    "HeaderName": "Adınız",
+    "PlaceholderName": "Adınızı girin",
+    "HeaderMail": "E-posta Adresiniz",
+    "PlaceholderMail": "E-posta adresinizi girin",
+    "HeaderMessage": "Mesajınız",
+    "PlaceholderMessage": "Mesajınızı girin",
+    "Submit": "Bileti Gönder"
+    }
 }

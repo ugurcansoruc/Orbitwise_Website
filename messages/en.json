@@ -63,9 +63,21 @@
     "Item_6_Header": "Raising Future Space and Technology Leaders",
     "Item_6_Content": "Our CubeSats enable young people to grow as leaders in space and technology. Through these projects, students develop the skills to manage and lead effective projects on a global scale."
   },
-  "Video_Component":
-  {
-    "Header":"",
-    "Content":""
+  "Video_Component": {
+    "Header": "",
+    "Content": ""
+  },
+  "ContactPageT": {
+    "Header": "Need Help? Open a Ticket",
+    "Content": "Our support team will get back to you ASAP via email."
+  },
+  "ContactFormT": {
+    "HeaderName": "Your Name",
+    "PlaceholderName": "Enter your name",
+    "HeaderMail": "Your Email",
+    "PlaceholderMail": "Enter your email",
+    "HeaderMessage": "Your Message",
+    "PlaceholderMessage": "Enter your message",
+    "Submit": "Submit Ticket"
   }
 }

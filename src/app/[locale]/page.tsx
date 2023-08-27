@@ -1,5 +1,5 @@
 'use client';
-
+import { useTranslations } from 'next-intl';
 import AboutSectionOne from 'components/About/AboutSectionOne';
 import AboutSectionTwo from 'components/About/AboutSectionTwo';
 import Blog from 'components/Blog';
@@ -11,8 +11,28 @@ import Hero from 'components/Hero';
 import Pricing from 'components/Pricing';
 import Testimonials from 'components/Testimonials';
 import Video from 'components/Video';
+import { ContactPageT, ContactFormT } from "types/contactPageTranslation";
 
 export default function IndexPage() {
+  const TranslateContactPageT = useTranslations('ContactPageT');
+  const TranslateContactFormT = useTranslations('ContactFormT');
+
+  //Contact translation
+  const _ContactFormT : ContactFormT = {
+    HeaderName: TranslateContactFormT('HeaderName'),
+    PlaceholderName: TranslateContactFormT('PlaceholderName'),
+    HeaderMail: TranslateContactFormT('HeaderMail'),
+    PlaceholderMail: TranslateContactFormT('PlaceholderMail'),
+    HeaderMessage: TranslateContactFormT('HeaderMessage'),
+    PlaceholderMessage: TranslateContactFormT('PlaceholderMessage'),
+    Submit: TranslateContactFormT('Submit'),
+  }
+  const _ContactPageT : ContactPageT = {
+    Header:TranslateContactPageT('Header'),
+    Content:TranslateContactPageT('Content'),
+    _ContactFormT: _ContactFormT
+  }
+
   return (
     <>      
       <ScrollUp />
@@ -20,13 +40,16 @@ export default function IndexPage() {
       <AboutSectionOne />
       <AboutSectionTwo />
       <Video />
-      <Brands />
-
+      {
+        /*
+        <Brands />
       <Features/>
       <Testimonials />
       <Pricing />
       <Blog />
-      <Contact />
+        */
+      }
+      <Contact ContactPageTranslate={_ContactPageT}/>
     </>
   );
 }
