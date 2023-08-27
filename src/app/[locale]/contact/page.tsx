@@ -44,7 +44,7 @@ function ContactPage () {
         mainPageName={tPage('Home')}
       />
 
-      <Contact ContactPageTranslate={_ContactPageT} _NewsLatterBoxT={_NewsLatterBoxT}/>
+      <Contact _ContactPageTranslate={_ContactPageT} _NewsLatterBoxT={_NewsLatterBoxT}/>
     </>
   );
 };

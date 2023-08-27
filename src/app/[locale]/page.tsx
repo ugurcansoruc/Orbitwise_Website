@@ -60,7 +60,7 @@ export default function IndexPage() {
       <Blog />
         */
       }
-      <Contact ContactPageTranslate={_ContactPageT} _NewsLatterBoxT={_NewsLatterBoxT}/>
+      <Contact _ContactPageTranslate={_ContactPageT} _NewsLatterBoxT={_NewsLatterBoxT}/>
     </>
   );
 }

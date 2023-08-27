@@ -1,8 +1,28 @@
+"use client";
+
+import { FC } from "react";
+import { useForm } from "react-hook-form";
+import { sendEmail } from "../../../utils/send-email";
+import { MailFormData } from "../../types/form";
 import { ContactPageT } from "types/contactPageTranslation";
 import { NewsLatterBoxT } from "types/newsLatterBoxTranslation";
 import NewsLatterBox from "./NewsLatterBox";
 
-function Contact ({ContactPageTranslate, _NewsLatterBoxT}:{ContactPageTranslate:ContactPageT, _NewsLatterBoxT:NewsLatterBoxT}) {  
+interface ContactProps {
+  _ContactPageTranslate: ContactPageT;
+  _NewsLatterBoxT: NewsLatterBoxT;
+}
+
+const Contact: FC<ContactProps> = ({
+  _ContactPageTranslate,
+  _NewsLatterBoxT,
+}) => {
+  const { register, handleSubmit } = useForm<MailFormData>();
+
+  function onSubmit(data: MailFormData) {
+    sendEmail(data);
+  }
+
   return (
     <section id="contact" className=" py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -14,12 +34,12 @@ function Contact ({ContactPageTranslate, _NewsLatterBoxT}:{ContactPageTranslate:
               "
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                {ContactPageTranslate.Header}
+                {_ContactPageTranslate.Header}
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-              {ContactPageTranslate.Content}
+              {_ContactPageTranslate.Content}
               </p>
-              <form>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -27,12 +47,13 @@ function Contact ({ContactPageTranslate, _NewsLatterBoxT}:{ContactPageTranslate:
                         htmlFor="name"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {ContactPageTranslate._ContactFormT.HeaderName}
+                        {_ContactPageTranslate._ContactFormT.HeaderName}
                       </label>
                       <input
                         type="text"
-                        placeholder={ContactPageTranslate._ContactFormT.PlaceholderName}
+                        placeholder={_ContactPageTranslate._ContactFormT.PlaceholderName}
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        {...register('name', { required: true })}
                       />
                     </div>
                   </div>
@@ -42,12 +63,13 @@ function Contact ({ContactPageTranslate, _NewsLatterBoxT}:{ContactPageTranslate:
                         htmlFor="email"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {ContactPageTranslate._ContactFormT.HeaderMail}
+                        {_ContactPageTranslate._ContactFormT.HeaderMail}
                       </label>
                       <input
                         type="email"
-                        placeholder={ContactPageTranslate._ContactFormT.PlaceholderMail}
+                        placeholder={_ContactPageTranslate._ContactFormT.PlaceholderMail}
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        {...register('email', { required: true })}
                       />
                     </div>
                   </div>
@@ -57,19 +79,19 @@ function Contact ({ContactPageTranslate, _NewsLatterBoxT}:{ContactPageTranslate:
                         htmlFor="message"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        {ContactPageTranslate._ContactFormT.HeaderMessage}
+                        {_ContactPageTranslate._ContactFormT.HeaderMessage}
                       </label>
                       <textarea
-                        name="message"
                         rows={5}
-                        placeholder={ContactPageTranslate._ContactFormT.PlaceholderMessage}
+                        placeholder={_ContactPageTranslate._ContactFormT.PlaceholderMessage}
                         className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        {...register('message', { required: true })}
                       ></textarea>
                     </div>
                   </div>
                   <div className="w-full">
                     <button className="rounded-md bg-primary px-4 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                      {ContactPageTranslate._ContactFormT.Submit}
+                      {_ContactPageTranslate._ContactFormT.Submit}
                     </button>
                   </div>
                 </div>
