@@ -1,6 +1,6 @@
-import { MailFormData } from "types/form";
+import { SendMailData } from "types/form";
 
-export function sendEmail(data: MailFormData): Promise<boolean> {
+export function sendEmail(data: SendMailData): Promise<boolean> {
   const apiEndpoint = '/api/email';
 
   return fetch(apiEndpoint, {
@@ -9,12 +9,12 @@ export function sendEmail(data: MailFormData): Promise<boolean> {
   })
     .then((res) => {
       if (res.ok) {
-        return true; // Promise<boolean> olarak dönüş yapılır
+        return true; 
       } else {
-        return false; // Promise<boolean> olarak dönüş yapılır
+        return false; 
       }
     })
     .catch(() => {
-      return false; // Promise<boolean> olarak dönüş yapılır
+      return false;
     });
 }

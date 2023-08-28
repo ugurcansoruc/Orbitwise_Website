@@ -21,6 +21,7 @@ function ContactPage () {
     PlaceholderMessage: TranslateContactFormT('PlaceholderMessage'),
     Submit: TranslateContactFormT('Submit'),
     ModalMessageSuccess: TranslateContactFormT('MailSendSuccess'),
+    ModalMessageSuccessData:TranslateContactFormT('MailSendSuccessData'),
     ModalMessageFail: TranslateContactFormT('MailSendFail')
   }
   const _ContactPageT : ContactPageT = {

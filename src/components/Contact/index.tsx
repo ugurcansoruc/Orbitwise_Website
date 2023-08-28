@@ -1,12 +1,18 @@
 "use client";
 
-import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
-import { FC } from "react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  useDisclosure,
+} from "@nextui-org/react";
+import { FC, useState} from "react";
 import { useForm } from "react-hook-form";
 import { ContactPageT } from "types/contactPageTranslation";
 import { NewsLatterBoxT } from "types/newsLatterBoxTranslation";
 import { sendEmail } from "../../../utils/send-email";
-import { MailFormData } from "../../types/form";
+import { MailFormData, SendMailData } from "../../types/form";
 import NewsLatterBox from "./NewsLatterBox";
 
 interface ContactProps {
@@ -18,20 +24,46 @@ const Contact: FC<ContactProps> = ({
   _ContactPageTranslate,
   _NewsLatterBoxT,
 }) => {
+  const [emailSent, setEmailSent] = useState<boolean | null>(null);
+  const [formData, setFormData] = useState<MailFormData | null>(null);
+
   const { register, handleSubmit } = useForm<MailFormData>();
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
-  
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   async function onSubmit(data: MailFormData) {
     try {
-      const emailSent = await sendEmail(data); // await kullanarak sendEmail fonksiyonunu bekleyin
-  
-      if (emailSent) {
-        onOpen(); // Email başarıyla gönderildiğinde onOpen işlevini çağırabilirsiniz
+      const _SendVisitorMailData:SendMailData = {
+        _from:"orbitwise.space@gmail.com", 
+        _to : "orbitwise.space@gmail.com",
+        _subject : `Message from ${data.email}`,
+        _text: `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`,
+      }
+
+      const _SendOrbitwiseMailData:SendMailData = {
+        _from:"orbitwise.space@gmail.com", 
+        _to : data.email,
+        _subject : `Orbitwise`,
+        _text: _ContactPageTranslate._ContactFormT.ModalMessageSuccessData.replace("-name",data.name).replace("-message",data.message),
+      }
+
+      let _emailSent = await sendEmail(_SendVisitorMailData); 
+      if (_emailSent) {
+        setEmailSent(_emailSent);
+        setFormData(data);
+        onOpen(); 
+
+        //Basarili maili gondeririz.
+        _emailSent = await sendEmail(_SendOrbitwiseMailData); 
       } else {
+        setEmailSent(false);
+        setFormData(data);
+        onOpen();
         // Email gönderilemedi
       }
     } catch (error) {
-      // Hata durumları
+      setEmailSent(false);
+      setFormData(data);
+      onOpen();
     }
   }
 
@@ -41,9 +73,21 @@ const Contact: FC<ContactProps> = ({
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Orbitwise</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">
+                Orbitwise
+              </ModalHeader>
               <ModalBody>
-               {_ContactPageTranslate._ContactFormT.ModalMessageSuccess}
+                <p>
+                  {emailSent === true
+                    ? _ContactPageTranslate._ContactFormT.ModalMessageSuccess.replace(
+                        "-name",
+                        formData?.name.split(" ")[0]
+                      )
+                    : _ContactPageTranslate._ContactFormT.ModalMessageFail.replace(
+                        "-name",
+                        formData?.name.split(" ")[0]
+                      )}
+                </p>
               </ModalBody>
             </>
           )}
@@ -54,7 +98,7 @@ const Contact: FC<ContactProps> = ({
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-9/12 xl:w-8/12">
             <div
-              className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] py-11 px-8 dark:bg-primary/10 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+              className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] px-8 py-11 dark:bg-primary/10 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s
               "
             >
@@ -62,7 +106,7 @@ const Contact: FC<ContactProps> = ({
                 {_ContactPageTranslate.Header}
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-              {_ContactPageTranslate.Content}
+                {_ContactPageTranslate.Content}
               </p>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="-mx-4 flex flex-wrap">
@@ -76,9 +120,11 @@ const Contact: FC<ContactProps> = ({
                       </label>
                       <input
                         type="text"
-                        placeholder={_ContactPageTranslate._ContactFormT.PlaceholderName}
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                        {...register('name', { required: true })}
+                        placeholder={
+                          _ContactPageTranslate._ContactFormT.PlaceholderName
+                        }
+                        className="w-full rounded-md border border-transparent px-6 py-3 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        {...register("name", { required: true })}
                       />
                     </div>
                   </div>
@@ -92,9 +138,11 @@ const Contact: FC<ContactProps> = ({
                       </label>
                       <input
                         type="email"
-                        placeholder={_ContactPageTranslate._ContactFormT.PlaceholderMail}
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                        {...register('email', { required: true })}
+                        placeholder={
+                          _ContactPageTranslate._ContactFormT.PlaceholderMail
+                        }
+                        className="w-full rounded-md border border-transparent px-6 py-3 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        {...register("email", { required: true })}
                       />
                     </div>
                   </div>
@@ -108,9 +156,11 @@ const Contact: FC<ContactProps> = ({
                       </label>
                       <textarea
                         rows={5}
-                        placeholder={_ContactPageTranslate._ContactFormT.PlaceholderMessage}
-                        className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                        {...register('message', { required: true })}
+                        placeholder={
+                          _ContactPageTranslate._ContactFormT.PlaceholderMessage
+                        }
+                        className="w-full resize-none rounded-md border border-transparent px-6 py-3 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        {...register("message", { required: true })}
                       ></textarea>
                     </div>
                   </div>
@@ -124,7 +174,7 @@ const Contact: FC<ContactProps> = ({
             </div>
           </div>
           <div className="w-full px-4 lg:w-3/12 xl:w-4/12">
-            <NewsLatterBox _NewsLatterBoxT={_NewsLatterBoxT}/>
+            <NewsLatterBox _NewsLatterBoxT={_NewsLatterBoxT} />
           </div>
         </div>
       </div>

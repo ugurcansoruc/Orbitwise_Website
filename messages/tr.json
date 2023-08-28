@@ -79,8 +79,9 @@
     "HeaderMessage": "Mesajınız",
     "PlaceholderMessage": "Mesajınızı girin",
     "Submit": "Mesajı Gönder",
-    "MailSendSuccess":"Mesajınız Orbitwise ekibine ulaştı. Size en kısa süre içerisinde dönüş yapacağız. İyi günler.",
-    "MailSendFail":"Mesajınız teknik bir aksaklık sebebi ile Orbitwise ekibine gönderilemedi. Sorunu en kısa sürede çözeceğiz. İyi günler."
+    "MailSendSuccess":"Merhaba -name,\nOrbitwise ekibine ilettiğin mesaj başarıyla ulaştı. Sana bir bilgilendirme maili gönderdik. Detayları incelemek için mailini kontrol edebilirsin. Mesajına en kısa sürede dönüş yapacağız.\nİyi günler.",
+    "MailSendSuccessData":"Sayın -name,\n\nOrbitwise ekibine ilettiğiniz mesajı aldık. Mesajınız aşağıdaki gibidir:\n\nMesaj: -message\n\nTarafımıza iletmek istediğiniz ek bilgileri, soruları veya istekleri aşağıdaki iletişim bilgilerinden bize iletebilirsiniz.\n\nTelefon: [-]\nE-posta:[orbitwise.space@gmail.com]\n\nEn kısa sürede tarafınıza geri dönüş yapacağız.\nSaygılarımla,\nOrbitwise Ekibi",
+    "MailSendFail":"Merhaba -name,\nMesajın teknik bir aksaklık sebebi ile Orbitwise ekibine gönderilemedi. Sorunu en kısa sürede çözeceğiz. İyi günler."
   },
   "NewsLatterBoxT": {
     "Header": "Gelecekteki güncellemeleri almak için abone olun",

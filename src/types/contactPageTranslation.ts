@@ -7,6 +7,7 @@ export type ContactFormT = {
     PlaceholderMessage: any;
     Submit: any;
     ModalMessageSuccess: any;
+    ModalMessageSuccessData:any;
     ModalMessageFail: any;
 }
 
