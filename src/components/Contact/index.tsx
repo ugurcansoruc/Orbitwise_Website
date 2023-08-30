@@ -11,7 +11,7 @@ import { FC, useState} from "react";
 import { useForm } from "react-hook-form";
 import { ContactPageT } from "types/contactPageTranslation";
 import { NewsLatterBoxT } from "types/newsLatterBoxTranslation";
-import { sendEmail } from "../../../utils/send-email";
+import { sendEmail } from "../../../utils/send_email";
 import { MailFormData, SendMailData } from "../../types/form";
 import NewsLatterBox from "./NewsLatterBox";
 
