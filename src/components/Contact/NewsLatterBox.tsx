@@ -5,12 +5,13 @@ import {
   ModalBody,
   useDisclosure,
 } from "@nextui-org/react";
-import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { SendMailData } from "types/form";
 import { NewsLatterBoxT } from "types/newsLatterBoxTranslation";
 import { MailDocument } from "types/newsletter";
 import { saveMail } from "../../../utils/save_email";
-
+import { sendEmail } from "../../../utils/send_email";
 
 function NewsLatterBox({
   _NewsLatterBoxT,
@@ -24,12 +25,23 @@ function NewsLatterBox({
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   async function onSubmit(data: MailDocument) {
+    
+    const _SendOrbitwiseMailSubscripton:SendMailData = {
+      _from:"orbitwise.space@gmail.com", 
+      _to : data.email,
+      _subject : `Orbitwise`,
+      _text: _NewsLatterBoxT.MailSaveSuccessData.replace("-name",data.name),
+    }
+
     try {
-      let _emailSave = await saveMail(data);
-      if (_emailSave) {
-        setEmailSave(_emailSave);
+      const emailSave = await saveMail(data);
+      if (emailSave) {
+        setEmailSave(emailSave);
         setFormData(data);
         onOpen();
+
+       //Basarili maili gondeririz.
+        await sendEmail(_SendOrbitwiseMailSubscripton); 
       } else {
         setEmailSave(false);
         setFormData(data);
@@ -55,16 +67,15 @@ function NewsLatterBox({
               </ModalHeader>
               <ModalBody>
                 <p>
-                  Test
-                  {/*_emailSave === true
-                    ? _ContactPageTranslate._ContactFormT.ModalMessageSuccess.replace(
+                  {_emailSave === true
+                    ? _NewsLatterBoxT.MailSaveSuccess.replace(
                         "-name",
                         formData?.name.split(" ")[0]
                       )
-                    : _ContactPageTranslate._ContactFormT.ModalMessageFail.replace(
+                    : _NewsLatterBoxT.MailSaveFail.replace(
                         "-name",
                         formData?.name.split(" ")[0]
-                    )*/}
+                    )}
                 </p>
               </ModalBody>
             </>

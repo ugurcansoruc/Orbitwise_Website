@@ -5,4 +5,7 @@ export type NewsLatterBoxT = {
     PlaceholderMail: any;
     Subscribe: any;
     SubContent: any;
+    MailSaveSuccess: any;
+    MailSaveSuccessData: any;
+    MailSaveFail: any;
 }

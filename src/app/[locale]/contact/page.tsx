@@ -37,6 +37,9 @@ function ContactPage () {
     PlaceholderMail: TranslationNewsLatterBoxT("PlaceholderMail"),
     Subscribe: TranslationNewsLatterBoxT("Subscribe"),
     SubContent: TranslationNewsLatterBoxT("SubContent"),
+    MailSaveSuccess: TranslationNewsLatterBoxT("MailSaveSuccess"),
+    MailSaveSuccessData: TranslationNewsLatterBoxT("MailSaveSuccessData"),
+    MailSaveFail: TranslationNewsLatterBoxT("MailSaveFail")
   };
 
   return (

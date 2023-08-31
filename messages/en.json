@@ -89,6 +89,9 @@
     "PlaceholderName": "Enter your name",
     "PlaceholderMail": "Enter your email",
     "Subscribe": "Subscribe",
-    "SubContent": "No spam guaranteed, So please don’t send any spam mail."
+    "SubContent": "No spam guaranteed, So please don’t send any spam mail.",
+    "MailSaveSuccess":"Hello -name,\nYou have successfully subscribed to Orbitwise newsletter. We have sent you an informative email. You can check your email for details.\nHave a great day.",
+    "MailSaveSuccessData":"Dear -name,\n\nYou have been successfully subscribed to the Orbitwise newsletter. Every Sunday, we will be sharing the latest developments in the fields of aviation and space with you.\n\nYou can reach out to us with additional information, questions, or requests using the contact information below.\n\nPhone: [-]\nEmail: [orbitwise.space@gmail.com]\n\nBest regards,\nOrbitwise Team",
+    "MailSaveFail":"Hello -name,\nThe newsletter subscription process couldn't be completed due to a technical issue. We will resolve the problem as soon as possible. Have a great day."
   }
 }

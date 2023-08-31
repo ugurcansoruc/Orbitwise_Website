@@ -32,28 +32,19 @@ const Contact: FC<ContactProps> = ({
 
   async function onSubmit(data: MailFormData) {
     try {
-      const _SendVisitorMailData:SendMailData = {
-        _from:"orbitwise.space@gmail.com", 
-        _to : "orbitwise.space@gmail.com",
-        _subject : `Message from ${data.email}`,
-        _text: `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`,
-      }
-
       const _SendOrbitwiseMailData:SendMailData = {
         _from:"orbitwise.space@gmail.com", 
         _to : data.email,
         _subject : `Orbitwise`,
         _text: _ContactPageTranslate._ContactFormT.ModalMessageSuccessData.replace("-name",data.name).replace("-message",data.message),
       }
-
-      let _emailSent = await sendEmail(_SendVisitorMailData); 
+        //Basarili maili gondeririz.
+      const _emailSent = await sendEmail(_SendOrbitwiseMailData);
       if (_emailSent) {
         setEmailSent(_emailSent);
         setFormData(data);
         onOpen(); 
 
-        //Basarili maili gondeririz.
-        _emailSent = await sendEmail(_SendOrbitwiseMailData); 
       } else {
         setEmailSent(false);
         setFormData(data);

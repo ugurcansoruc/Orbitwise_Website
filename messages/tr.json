@@ -89,6 +89,9 @@
     "PlaceholderName": "Adınızı girin",
     "PlaceholderMail": "E-postanızı girin",
     "Subscribe": "Abone Ol",
-    "SubContent": "Gönderdiğimiz spam garantilidir, bu nedenle lütfen spam e-posta göndermeyin."
+    "SubContent": "Gönderdiğimiz spam garantilidir, bu nedenle lütfen spam e-posta göndermeyin.",
+    "MailSaveSuccess":"Merhaba -name,\nOrbitwise bültenine başarılı bir şekilde kaydoldun. Sana bir bilgilendirme maili gönderdik. Detayları incelemek için mailini kontrol edebilirsin.\nİyi günler.",
+    "MailSaveSuccessData":"Sayın -name,\n\nOrbitwise bültenine başarılı şekilde kaydoldunuz. Her pazar en güncel havacılık, uzay alanlarındaki gelişmeleri sizinle paylaşıyor olacağız.\n\nTarafımıza iletmek istediğiniz ek bilgileri, soruları veya istekleri aşağıdaki iletişim bilgilerinden bize iletebilirsiniz.\n\nTelefon: [-]\nE-posta:[orbitwise.space@gmail.com]\n\nSaygılarımla,\nOrbitwise Ekibi",
+    "MailSaveFail":"Merhaba -name,\nBülten üyelik işlemi teknik bir aksaklık sebebi ile gerçekleştirilemedi. Sorunu en kısa sürede çözeceğiz. İyi günler."
   }
 }
